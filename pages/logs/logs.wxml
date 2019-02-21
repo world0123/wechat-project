@@ -1,0 +1,12 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view>
+<progress percent="20" show-info='true' stroke-width='20px' />
+
+
+<progress percent="40" color='#ff00ff' />
+<progress percent="80" active />
+<progress percent="80" active />
