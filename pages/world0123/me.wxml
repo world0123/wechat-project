@@ -1,0 +1,27 @@
+
+<view class="page" bindtouchend='touchend' bindtouchstart='touchstart'>
+
+  <!-- 侧滑栏 -->
+  <view class="page_tab">
+    <view class="page_tab_content">
+      <text>个人主页</text>
+    </view>
+  </view>
+
+  <!--遮罩层-->
+  <view class="bg" bindtap='hideview' style='display:{{display}}'></view>
+
+  <!-- 主页 -->
+  <view class="home" style="{{translate}}">
+    
+    <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="showview" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+    <text class='txt'>纪念日</text>
+    </view>
+    <text>pages/home/home.wxml</text>
+  </view>
+
+</view>

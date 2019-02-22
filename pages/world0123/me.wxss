@@ -1,0 +1,70 @@
+/* pages/home/home.wxss */
+page{  
+  height: 100%  
+}  
+/* 主页 */  
+.home {  
+  position: absolute;  
+  width: 750rpx;  
+  height: 100%;  
+  z-index: 1;  
+  transition: All 0.4s ease;  
+  -webkit-transition: All 0.4s ease;  
+  background-color: #fb9817
+}  
+.icon_user{
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+   margin: 5px;
+}
+text.txt{
+  position: absolute;
+  width: 250px;
+  height: 68px;
+  text-align: center;
+  line-height: 68px;
+}
+.userinfo {
+  height: 68px;
+  background-color: #ff00ff;
+}
+
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+/* 遮罩层 */  
+.bg {    
+  display: none;    
+  position: fixed;    
+  top: 0%;    
+  left: 70%;    
+  width: 100%;    
+  height: 100%;    
+  background-color: black;    
+  z-index: 1001;    
+  -moz-opacity: 0.7;    
+  opacity: 0.70;    
+  transition:width 2s;  
+  filter: alpha(opacity=70);    
+}   
+
+ /* 侧滑栏 */  
+.page_tab {  
+  height: 100%;  
+  width: 750rpx;  
+  position: fixed;  
+  background-color: white;  
+  z-index: 0;  
+}  
+  
+.page_tab_content .wc {  
+  color: #000;  
+  position: relative;  
+  font-size: 32rpx;  
+  padding: 20rpx 0 30rpx 20rpx;  
+}  
