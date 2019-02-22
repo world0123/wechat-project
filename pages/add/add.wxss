@@ -1,1 +1,33 @@
 /* pages/add/add.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.switchstyle{
+  padding: 0rpx 0rpx;
+  border-bottom: 0rpx;
+  align-items: right;
+}
+.container{
+  padding: 0rpx 0rpx; 
+}
+.itemstyle{
+  display: flex;
+  padding: 20rpx 40rpx ;
+  border-bottom: 2rpx solid #eee;
+}
+
+.form_put button{
+  height: 
+}
+.form_put view input{
+  text-align: right;
+}
+.itemstyle picker{
+  margin-right: 10rpx;
+  display: block;
+}
+.picker,
+.itemstyle switch{
+  text-align: center;
+}

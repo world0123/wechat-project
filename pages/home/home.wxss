@@ -1,1 +1,56 @@
 /* pages/home/home.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  padding: 0rpx;
+  align-items: center;
+  width: 100%;
+  height:100%;
+  background-color: white;
+  position: absolute;
+}
+.plus-button{
+  width: 150rpx;
+  height: 150rpx;
+  position: absolute;
+  bottom:20rpx;
+}
+.card_container view{
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  height: 300rpx;
+  width: 90%;
+  margin-left: 37.5rpx;
+  margin-bottom: 40rpx;
+  padding-top: 50rpx;
+  border-radius:30rpx; 
+}
+.card_container view text{
+  display: block;
+  margin-bottom: 20rpx;
+}
+.date{
+  margin-bottom: 0rpx;
+  font-family: cursive;
+  font-size: 50rpx;
+}
+
+.card_container{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 1000rpx;
+  align-items: center;
+}
+.item1{
+  background: url('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1936437104,1373217514&fm=26&gp=0.jpg');
+}
+.item2{
+  background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550831210789&di=fa9828a75be5444b6927ca6c48f7e4b3&imgtype=0&src=http%3A%2F%2Fpic.ffpic.com%2Ffiles%2F2014%2F0325%2F0324fjzrbzxz640x11369.jpg');
+}
+.item3{
+  background: url('http://attachments.gfan.net.cn/forum/201703/01/170851dy3rrvx13yn5ysvy.jpg.thumb.jpg')
+}
