@@ -1,2 +1,23 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class="container">
+  <scroll-view class='card_container' scroll-y='true'>
+    <view class='item1'>
+      <text class='title'>距离纪念日还有0天</text>
+      <text class='content'>
+      "未来26世纪，科技发展，人类与机械改造人共存"
+      </text>
+      <text class='date'>2019-02-22</text>
+    </view>
+    <view class='item2'>
+      <text class='title'>距离纪念日还有2天</text>
+      <text class='content'>备注</text>
+      <text class='date'>2019-02-22</text>
+    </view>
+    <view class='item3'>
+      <text class='title'>距离纪念日还有5天</text>
+      <text class='content'>备注</text>
+      <text class='date'>2019-02-22</text>
+    </view>
+  </scroll-view>
+  <image class="plus-button" src="/image/plus-circle.png" bindtap="addpage"></image>
+</view>
