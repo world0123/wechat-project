@@ -2,7 +2,8 @@
   "pages": [
     "pages/world0123/me",
     "pages/add/add",
-    "pages/contributor/contributor"
+    "pages/contributor/contributor",
+    "pages/world0123/me"
   ],
   "window": {
     "backgroundTextStyle": "light",

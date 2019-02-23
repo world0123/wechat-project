@@ -1,13 +1,13 @@
 <!--pages/add/add.wxml-->
 <view class='container'>
-  <form class='form_put'>
+  <form class='form_put' bindsubmit='subdata'>
     <view class='itemstyle'><!--表单的具体内容-->
-      <text>名称:</text>
-      <input placeholder="请输入名称" placeholder-style='text-align:right;'></input>
+      <text >名称:</text>
+      <input  name="text-name"></input>
     </view>
     <view class='itemstyle'>
       <text>日期</text>
-      <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <picker mode="date" value="{{date}}" start="2019-02-22" end="2050-12-31" bindchange="bindDateChange">
         <view class="picker">
           : {{date}}
         </view>
@@ -29,6 +29,6 @@
       <text>封面:</text>
       <input placeholder='修改封面'></input>
     </view>
-    <button bindtap=''>完成</button>
+    <button form-type='submit'>完成</button>
   </form>
 </view>
