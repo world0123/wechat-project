@@ -17,11 +17,15 @@ Page({
     })
   },
   //响应选择日期
-  bindTimeChange: function (e) {
+  bindDateChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      time: e.detail.value
+      date: e.detail.value
     })
+  },
+  subdata:function(e)
+  {
+    console.log("提交数据:",e.detail.value)
   },
 
   /**
