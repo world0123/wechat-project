@@ -4,7 +4,13 @@
   <!-- 侧滑栏 -->
   <view class="page_tab">
     <view class="page_tab_content">
-      <text>个人主页</text>
+       <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
     </view>
   </view>
 
@@ -13,14 +19,10 @@
 
   <!-- 主页 -->
   <view class="home" style="{{translate}}">
-    
-    <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="showview" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-    </block>
+  <view class='top'>
+    <image bindtouchend='showview' class='icon_user' src='../../resourse/1.png'></image>
     <text class='txt'>纪念日</text>
-    </view>
+  </view>
     <text>pages/home/home.wxml</text>
   </view>
 

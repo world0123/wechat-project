@@ -10,32 +10,27 @@ page{
   z-index: 1;  
   transition: All 0.4s ease;  
   -webkit-transition: All 0.4s ease;  
-  background-color: #fb9817
+  background-color: #fffdfa
 }  
 .icon_user{
   height: 40px;
   width: 40px;
-  padding: 5px;
-   margin: 5px;
+  position: relative;
+  top: 3px;
+  left: 3px;
 }
-text.txt{
-  position: absolute;
-  width: 250px;
-  height: 68px;
-  text-align: center;
-  line-height: 68px;
+.top{
+  background-color: rgb(255, 253, 253);
+  height: 43px;
+  border-bottom: 1px solid rgb(194, 194, 194);
 }
-.userinfo {
-  height: 68px;
-  background-color: #ff00ff;
+.txt{
+  position: relative;
+  left: 120px;
+  top: -10px;  
+  color:rgb(92, 92, 92);
 }
 
-.userinfo-avatar {
-  width: 100rpx;
-  height: 100rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
 
 /* 遮罩层 */  
 .bg {    
@@ -45,7 +40,7 @@ text.txt{
   left: 70%;    
   width: 100%;    
   height: 100%;    
-  background-color: black;    
+  background-color: rgb(163, 162, 162);    
   z-index: 1001;    
   -moz-opacity: 0.7;    
   opacity: 0.70;    
@@ -68,3 +63,22 @@ text.txt{
   font-size: 32rpx;  
   padding: 20rpx 0 30rpx 20rpx;  
 }  
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  
+}
+.userinfo-avatar {
+  width: 140rpx;
+  height: 140rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 80px;top: 10px;
+}
+.userinfo-nickname {
+  color: #aaa;
+  position:absolute;
+  left: 105px;top: 95px;
+}
