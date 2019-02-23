@@ -1,16 +1,10 @@
 {
   "pages": [
-<<<<<<< HEAD
+    "pages/home/home",
     "pages/contributor/contributor",
     "pages/world0123/me",
     "pages/home/home",
     "pages/add/add"
-=======
-    "pages/home/home",
-    "pages/world0123/me",
-    "pages/add/add",
-    "pages/contributor/contributor"
->>>>>>> d979df887bece68fe42757628b18f66124044b32
   ],
   "window": {
     "backgroundTextStyle": "light",
