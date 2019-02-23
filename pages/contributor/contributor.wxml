@@ -1,2 +1,12 @@
 <!--pages/contributor/contributor.wxml-->
-<text>pages/contributor/contributor.wxml</text>
+<view>
+  <!-- 头部————展示小程序logo，名称 -->
+  <view class='header'>
+    <span>
+      <image src='../../image/logo.png'></image>
+    </span>
+    <span class="name">
+      纪念日
+    </span>
+  </view>
+</view>
