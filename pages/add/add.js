@@ -5,27 +5,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-    date:'2019-02-22',
-    array: ['不重复', '重复'],
-    index: 0
-  },
-  //响应是否重复
-  bindPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index: e.detail.value
-    })
+    text_name:'',
+    upmost:false,
+    d:'2019-02-22',
+    shorttext:''
   },
   //响应选择日期
   bindDateChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+    //console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      date: e.detail.value
+      d: e.detail.value
     })
   },
+
   subdata:function(e)
   {
-    console.log("提交数据:",e.detail.value)
+    let {d,shorttext,text_name,upmost} = e.detail.value
+    if(!text_name){
+      wx.showModal({
+        title: '提示',
+        content: '名称不能为空',
+        showCancel:false,  
+      })
+    }
+    else{
+      console.log("提交数据:", e.detail.value)
+      wx.navigateBack({
+        detail:1
+      })
+    }
   },
 
   /**

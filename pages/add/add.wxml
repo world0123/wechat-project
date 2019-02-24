@@ -3,27 +3,21 @@
   <form class='form_put' bindsubmit='subdata'>
     <view class='itemstyle'><!--表单的具体内容-->
       <text >名称:</text>
-      <input  name="text-name"></input>
+      <input  name="text_name" placeholder='输入名称'></input>
     </view>
+    <view class='itemstyle'><!--表单的具体内容-->
+      <text >简介:</text>
+      <input  name="shorttext" placeholder='简单介绍'></input>
+    </view>    
     <view class='itemstyle'>
       <text>日期</text>
-      <picker mode="date" value="{{date}}" start="2019-02-22" end="2050-12-31" bindchange="bindDateChange">
-        <view class="picker">
-          : {{date}}
-        </view>
-      </picker>
-    </view>
-    <view class='itemstyle'>
-      <text>是否重复</text>
-      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-        <view class="picker">
-          : {{array[index]}}
-        </view>
+      <picker mode="date" value="{{date}}" start="2019-02-22" end="2050-12-31" bindchange="bindDateChange" name='d'>
+       : {{d}}
       </picker>
     </view>
     <view class='itemstyle'>
       <text>是否置顶:</text>
-      <switch class='switchstyle'></switch>
+      <switch class='switchstyle' name='upmost'></switch>
     </view>
     <view class='itemstyle'>
       <text>封面:</text>
