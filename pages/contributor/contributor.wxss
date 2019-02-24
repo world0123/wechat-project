@@ -3,22 +3,130 @@ page{
   background-color: #f8f8f9;
   width: 100%;
   height: 100%;
+  color: #495060;
 }
 
-.header{
-  margin: 20rpx;
+.header,
+.contributor_bar,
+.time_line{
+  margin: 20rpx 50rpx;
   background-color: #fff;
   border-radius: 10rpx;
-  padding: 20rpx;
+  box-shadow: -8rpx 10rpx 20rpx #e2e2e2;
 }
 
-.header image{
+span{
+  display: inline-block;
+}
+
+.header image,
+.avatar image{
   width: 120rpx;
   height: 120rpx;
+  margin: 20rpx;
   border-radius: 50%;
   vertical-align: middle;
+  box-shadow: -8rpx 10rpx 20rpx #e2e2e2;
 }
 
-.name{
-  margin-left: 30rpx;
+swiper{
+  height: 338rpx;
+}
+
+.scroll_bar{
+  display: flex;
+  flex-direction: row;
+}
+
+.contributor_bar{
+  margin: 20rpx 0;
+  background-color: #dbdbdb;
+  transform: scale(0.9);
+}
+
+.selected{
+  transform: scale(1);
+}
+
+.avatar{
+  vertical-align: bottom;
+}
+
+.avatar image{
+  border-radius: 10rpx;
+}
+
+.contributor_info{
+  margin: 20rpx 0;
+}
+
+.contributor_name{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom:15rpx;
+}
+
+.con_btn{
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  margin: 0 30rpx 0 0;
+  border-radius: 40rpx;
+  padding: 8rpx 24rpx;
+  background-color: #4a8dfe;
+}
+
+.con_logo{
+  border-radius: 50%;
+  padding: 0;
+  background-color: #515151;
+}
+
+.con_logo image{
+  vertical-align: top;
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.disc{
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+
+.time_line{
+  padding: 20rpx;
+  position: relative;
+}
+
+.triangle{
+  content: '';
+  width: 0;
+  height: 0;
+  border: 0 solid #515151;
+  border-top-width: 20rpx;
+  border-left: 17rpx solid transparent;
+  border-right: 17rpx solid transparent;
+  position: absolute;
+  top: 46%;
+  right: 30rpx;
+}
+
+@keyframes show{
+  from {transform: rotate(0deg);}
+  to {transform: rotate(180deg);}
+}
+
+@keyframes hide{
+  from {transform: rotate(180deg);}
+  to {transform: rotate(0deg);}
+}
+
+.process{
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  margin-right: 15rpx;
 }

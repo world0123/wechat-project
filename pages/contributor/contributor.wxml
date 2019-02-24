@@ -5,8 +5,58 @@
     <span>
       <image src='../../image/logo.png'></image>
     </span>
-    <span class="name">
+    <span class="mima_program_name">
       纪念日
     </span>
+  </view>
+
+  <!-- contributor Bar -->
+  <swiper
+    current-item-id="{{currentItemId}}"
+    bindchange="swiperChange"
+    previous-margin="50rpx"
+    next-margin="50rpx">
+    <block wx:for="{{arr}}" wx:key="{{index}}">
+      <swiper-item item-id="{{index}}">
+        <view class='contributor_bar {{index == currentItemId ? "selected" : ""}}'>
+          <view>
+            <span class='avatar'>
+              <image src='../../image/iwtf.png'></image>
+            </span>
+            <span class="contributor_info">
+              <view class='contributor_name'>Contributor: IWTF</view>
+              <view>
+                <span class="con_btn">
+                  <span class="con_logo">
+                    <image src='../../image/github.png'></image>
+                  </span>  
+                  Github
+                </span>
+                <span class="con_btn">
+                  <span class="con_logo">
+                    <image src='../../image/qq.png' style="background-color: #4a8bfe;"></image>
+                  </span>
+                  QQ
+                </span>
+              </view>
+            </span>
+          </view>
+          <view class='disc'>
+            <a>简介：</a>
+            学生，对编程有极大兴趣，对新技术有充满好奇
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='time_line'>
+    <view catchtap='showTimeLine'>
+      <span>
+        <image src='../../image/process.png' class='process'></image>
+      </span>
+      <span>开发历程</span>
+      <span class="triangle" 
+        style="{{showTimeLine ? 'animation: show 1s forwards;' : 'animation: hide 1s forwards;'}}"></span>
+    </view>
   </view>
 </view>
