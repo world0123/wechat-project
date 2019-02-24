@@ -1,7 +1,7 @@
 <!--pages/contributor/contributor.wxml-->
 <view>
   <!-- 头部————展示小程序logo，名称 -->
-  <view class='header'>
+  <view class='header' style='margin-top: 30rpx;'>
     <span>
       <image src='../../image/logo.png'></image>
     </span>
@@ -16,23 +16,23 @@
     bindchange="swiperChange"
     previous-margin="50rpx"
     next-margin="50rpx">
-    <block wx:for="{{arr}}" wx:key="{{index}}">
+    <block wx:for="{{contributors}}" wx:key="{{index}}">
       <swiper-item item-id="{{index}}">
         <view class='contributor_bar {{index == currentItemId ? "selected" : ""}}'>
           <view>
             <span class='avatar'>
-              <image src='../../image/iwtf.png'></image>
+              <image src='{{item.avatarUrl}}'></image>
             </span>
             <span class="contributor_info">
-              <view class='contributor_name'>Contributor: IWTF</view>
+              <view class='contributor_name'>Contributor: {{item.name}}</view>
               <view>
-                <span class="con_btn">
+                <span class="con_btn" data-type='Github' data-id="{{index}}" catchtap="copy">
                   <span class="con_logo">
                     <image src='../../image/github.png'></image>
                   </span>  
                   Github
                 </span>
-                <span class="con_btn">
+                <span class="con_btn" data-type='QQ' data-id="{{index}}" catchtap="copy">
                   <span class="con_logo">
                     <image src='../../image/qq.png' style="background-color: #4a8bfe;"></image>
                   </span>
@@ -43,20 +43,61 @@
           </view>
           <view class='disc'>
             <a>简介：</a>
-            学生，对编程有极大兴趣，对新技术有充满好奇
+            {{item.disc}}
           </view>
         </view>
       </swiper-item>
     </block>
   </swiper>
+
+  <!-- TimeLine Bar -->
   <view class='time_line'>
-    <view catchtap='showTimeLine'>
+    <view catchtap='showTimeLine' class='time_line_header'>
       <span>
         <image src='../../image/process.png' class='process'></image>
       </span>
       <span>开发历程</span>
+
+      <!-- 下拉三角 -->
       <span class="triangle" 
-        style="{{showTimeLine ? 'animation: show 1s forwards;' : 'animation: hide 1s forwards;'}}"></span>
+        style="{{showTimeLine ? 'animation: show .7s forwards;' : 'animation: hide .7s forwards;'}}"></span>
     </view>
+
+    <!-- 时间轴的绘制 -->
+    <view class='time_line_bar'
+      style="{{showTimeLine ? 'animation: increase_height .8s forwards;':'animation: recover_height .6s forwards;'}}">
+      
+      <!-- 完成庆祝 -->
+      <view class='done' hidden='{{!showTimeLine}}'>
+        <image src='../../image/success.png'></image>
+      </view>
+
+      <!-- 项目经过 -->
+      <view wx:for="{{dots}}" wx:key="{{index}}">
+        <!-- 时间点 -->
+        <view class='time_dot dot{{index}}'>
+          <image src="{{item.avatarUrl}}"></image>
+        </view>
+
+        <!-- 对话框左侧三角 -->
+        <view class='tris detail{{index}}'></view>
+
+        <!-- 时间线 -->
+        <view class='line line{{index}}'>
+        </view>
+
+        <!-- 时间点对应详情 -->
+        <view class='detail detail{{index}}'>
+          <a>{{item.time}}</a>
+          <view class='detail_info'>{{item.detail}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='star'>
+    觉得不错，就给个
+    <a data-type="star" catchtap="copy">⭐</a>
+    吧   o(≧v≦)o
   </view>
 </view>

@@ -21,7 +21,7 @@ page{
 }
 .top{
   background-color: rgb(255, 253, 253);
-  height: 43px;
+  height: 7%;
   border-bottom: 1px solid rgb(194, 194, 194);
 }
 .txt{
@@ -81,4 +81,61 @@ page{
   color: #aaa;
   position:absolute;
   left: 105px;top: 95px;
+}
+.container{
+  padding: 0rpx;
+  align-items: center;
+  width: 100%;
+  height:93%;
+  background-color: white;
+  position: absolute;
+}
+.plus-button{
+  width: 150rpx;
+  height: 150rpx;
+  position: absolute;
+  bottom:0rpx;
+}
+.order_item{
+  border-radius:35rpx; 
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  height: 300rpx;
+  width: 100%;  
+  background: url('//bpic.588ku.com/back_pic/04/69/85/25589819f2aac52.jpg!/fh/300/quality/90/unsharp/true/compress/true');
+  padding-top: 50rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+
+.content text{
+  text-align: center;
+  display: block;
+  margin-bottom: 20rpx;
+}
+
+.card_container{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 953rpx;
+  align-items: center;
+
+}
+.resume{
+  margin-top: 60rpx;
+  width: 70%;
+  display: -webkit-box;
+  text-align: center;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all; /* 追加这一行代码 */
+}
+.date{
+  display: block;
+  position: relative;
+  margin-top: 90rpx;
 }

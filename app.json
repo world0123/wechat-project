@@ -1,8 +1,7 @@
 {
   "pages": [
-    "pages/home/home",
-    "pages/contributor/contributor",
     "pages/world0123/me",
+    "pages/contributor/contributor",
     "pages/add/add"
   ],
   "window": {

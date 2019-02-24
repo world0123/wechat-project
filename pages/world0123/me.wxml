@@ -5,12 +5,12 @@
   <view class="page_tab">
     <view class="page_tab_content">
        <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-    </block>
-     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
+          <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+          <block wx:else>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          </block>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </view>
     </view>
   </view>
 
@@ -19,11 +19,22 @@
 
   <!-- 主页 -->
   <view class="home" style="{{translate}}">
-  <view class='top'>
-    <image bindtouchend='showview' class='icon_user' src='../../resourse/1.png'></image>
-    <text class='txt'>纪念日</text>
-  </view>
-    <text>pages/home/home.wxml</text>
+    <view class='top'>
+      <image bindtouchend='showview' class='icon_user' src='../../resourse/1.png'></image>
+      <text class='txt'>纪念日</text>
+    </view>
+    <view class="container">
+      <scroll-view class='card_container' scroll-y='{{isScroll}}'>
+        <block wx:key="item" wx:for="{{data}}">
+          <view data-index='{{index}}' class="order_item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx;opacity:{{item.opacity_value}}" >
+            <text class='tittle'>{{item.t}}</text><!--t-title ,c-content,d-date-->
+            <text class='resume'>{{item.c}}</text>
+            <text class='date'>{{item.d}}</text>
+          </view>
+        </block>
+      </scroll-view>
+      <image class="plus-button" src="/image/plus-circle.png" bindtap="addpage"></image>
+    </view>
   </view>
 
 </view>

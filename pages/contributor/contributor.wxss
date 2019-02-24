@@ -8,11 +8,16 @@ page{
 
 .header,
 .contributor_bar,
-.time_line{
+.time_line,
+.star{
   margin: 20rpx 50rpx;
   background-color: #fff;
   border-radius: 10rpx;
-  box-shadow: -8rpx 10rpx 20rpx #e2e2e2;
+  box-shadow: -8rpx 8rpx 20rpx #e2e2e2;
+}
+
+.mima_program_name{
+  font-weight: bold;
 }
 
 span{
@@ -94,10 +99,16 @@ swiper{
   border-radius: 10rpx;
   border-top-left-radius: 30rpx;
   border-top-right-radius: 30rpx;
+  min-height: 100rpx;
+}
+
+.time_line,
+.star{
+  margin: 20rpx 50rpx 30rpx;
+  padding: 20rpx;
 }
 
 .time_line{
-  padding: 20rpx;
   position: relative;
 }
 
@@ -110,7 +121,7 @@ swiper{
   border-left: 17rpx solid transparent;
   border-right: 17rpx solid transparent;
   position: absolute;
-  top: 46%;
+  top: 40rpx;
   right: 30rpx;
 }
 
@@ -129,4 +140,206 @@ swiper{
   height: 60rpx;
   vertical-align: middle;
   margin-right: 15rpx;
+}
+
+.time_line_header{
+  padding-bottom: 20rpx;
+}
+
+.time_line_bar{
+  /* min-height: 40rpx; */
+  border-top: 1px solid #e2e2e2;
+  position: relative;
+}
+
+@keyframes increase_height{
+  from {min-height: 0rpx;}
+  to {min-height: 510rpx;}
+}
+
+@keyframes recover_height{
+  from {min-height: 510rpx;}
+  to {min-height: 0rpx;}
+}
+
+.done{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 10rpx;
+  z-index: 10;
+}
+
+.done::after{
+  content: '完工🎉🎉';
+  width: 200rpx;
+  position: absolute;
+  top: 10rpx;
+  left: 110rpx;
+}
+
+.done image{
+  width: 70rpx;
+  height: 70rpx;
+  z-index: 10;
+}
+
+/****************** dots的样式 ******************/
+.time_dot{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  padding: 0;
+  opacity: .2;
+  z-index: 1;
+}
+.time_dot image{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+}
+.dot0{
+  animation: dot_move0 2s forwards;
+  animation-delay: 0;
+}
+.dot1{
+  animation-delay: .4s;
+  animation: dot_move1 2s forwards;
+}
+.dot2{
+  animation-delay: .7s;
+  animation: dot_move2 2s forwards;
+}
+.dot3{
+  animation-delay: 1s;
+  animation: dot_move3 2s forwards;
+}
+
+/* dots的移动动画，移动单位130rpx */
+@keyframes dot_move0{
+  from {opacity: .2;top: 20rpx;}
+  to {opacity: 1;top: 150rpx;}
+}
+@keyframes dot_move1{
+  from {opacity: .2;top: 20rpx;}
+  to {opacity: 1;top: 280rpx;}
+}
+@keyframes dot_move2{
+  from {opacity: .2;top: 20rpx;}
+  to {opacity: 1;top: 410rpx;}
+}
+@keyframes dot_move3{
+  from {opacity: .2;top: 20rpx;}
+  to {opacity: 1;top: 540rpx;}
+}
+
+/*************** 对话框左侧三角样式及动画 ***************/
+.tris{
+  z-index: 1;
+  position: absolute;
+  top: 40rpx;
+  left: 90rpx;
+  width: 0;
+  height: 0;
+  border: 0 solid #e9eaec;
+  border-right-width: 25rpx;
+  border-top: 20rpx solid transparent;
+  border-bottom: 20rpx solid transparent;
+}
+
+/****************** 时间线样式及动画 *****************/
+.line{
+  position: absolute;
+  top: 20rpx;
+  left: 40rpx;
+  display: inline-block;
+  width: 10rpx;
+  height: 120rpx;
+  background-color: #dddee1;
+  opacity: 0;
+}
+.line0{
+  animation: line_move0 .7s forwards;
+  animation-timing-function:ease-in;
+  animation-delay: 0;
+}
+.line1{
+  animation: line_move1 .7s forwards;
+  animation-timing-function:ease-in;
+  animation-delay: .4s;
+}
+.line2{
+  animation: line_move2 .7s forwards;
+  animation-timing-function:ease-in;
+  animation-delay: .7s;
+}
+.line3{
+  animation: line_move3 .7s forwards;
+  animation-timing-function:ease-in;
+  animation-delay: 1s;
+}
+@keyframes line_move0{
+  from {opacity: 0;top: 20rpx;}
+  to {opacity: 1;top: 20rpx;}
+}
+@keyframes line_move1{
+  from {opacity: 0;top: 20rpx;}
+  to {opacity: 1;top: 150rpx;}
+}
+@keyframes line_move2{
+  from {opacity: 0;top: 20rpx;}
+  to {opacity: 1;top: 280rpx;}
+}
+@keyframes line_move3{
+  from {opacity: 0;top: 20rpx;}
+  to {opacity: 1;top: 410rpx;}
+}
+
+/* detail样式及动画 */
+.detail{
+  position: absolute;
+  left: 110rpx;
+  display: inline-block;
+  width: 400rpx;
+  height: 90rpx;
+  background-color: #e9eaec;
+  border-radius: 8rpx;
+  padding: 5rpx 12rpx 10rpx;
+  font-size: 18px;
+}
+.detail_info{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.detail a{
+  font-weight: bold;
+}
+.detail0{
+  top: 150rpx;
+  animation-delay: 4s;
+  animation: detail0 6s forwards;
+}
+.detail1{
+  top: 280rpx;
+  animation-delay: 4s;
+  animation: detail0 6s forwards;
+}
+.detail2{
+  top: 410rpx;
+  animation-delay: 4s;
+  animation: detail0 6s forwards;
+}
+.detail3{
+  top: 540rpx;
+  animation-delay: 4s;
+  animation: detail0 6s forwards;
+}
+@keyframes detail0{
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
