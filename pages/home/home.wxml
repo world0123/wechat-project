@@ -3,11 +3,9 @@
   <scroll-view class='card_container' scroll-y='{{isScroll}}'>
       <block wx:key="item" wx:for="{{data}}">
     <view data-index='{{index}}' class="order_item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx;opacity:{{item.opacity_value}}" >
-        <view class="content">
-          <text>{{item.t}}</text><!--t-title ,c-content,d-date-->
-          <text>{{item.c}}</text>
-          <text>{{item.d}}</text>
-        </view>
+          <text class='tittle'>{{item.t}}</text><!--t-title ,c-content,d-date-->
+          <text class='resume'>{{item.c}}</text>
+          <text class='date'>{{item.d}}</text>
     </view>
     </block>
   </scroll-view>

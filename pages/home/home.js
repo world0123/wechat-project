@@ -1,10 +1,10 @@
 Page({
   data: {
-    data: [{ t: "距离纪念日还有5天", c:'阿丽塔超级战士',d:'2019-02-23',right: 0, opacity_value: 1 },
-      { t: "距离纪念日还有3天", c: '阿丽塔超级战士', d: '2019-02-23', right: 0, opacity_value: 1  },
-      { t: "距离纪念日还有4天", c: '阿丽塔超级战士', d: '2019-02-23', right: 0, opacity_value: 1 },
-      { t: "距离纪念日还有5天", c: '阿丽塔超级战士', d: '2019-02-23', right: 0, opacity_value: 1 },
-      { t: "距离纪念日还有8天", c: '阿丽塔超级战士', d: '2019-02-23', right: 0, opacity_value: 1  }],
+    data: [{ t: "距离纪念日还有5天", c:'阿丽塔战斗天使阿丽塔战斗天使阿丽塔战斗天使阿丽塔战斗天使阿丽塔战斗天使阿丽塔战斗天使',d:'2019-02-23',right: 0, opacity_value: 1 },
+      { t: "距离纪念日还有3天", c: '阿丽塔战斗天使', d: '2019-02-23', right: 0, opacity_value: 1  },
+      { t: "距离纪念日还有4天", c: '阿丽塔战斗天使', d: '2019-02-23', right: 0, opacity_value: 1 },
+      { t: "距离纪念日还有5天", c: '阿丽塔战斗天使', d: '2019-02-23', right: 0, opacity_value: 1 },
+      { t: "距离纪念日还有8天", c: '阿丽塔战斗天使', d: '2019-02-23', right: 0, opacity_value: 1  }],
     isScroll: true,
     windowHeight: 0,
   },

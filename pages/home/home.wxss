@@ -30,14 +30,30 @@ page{
   position: relative;
   margin-bottom: 20rpx;
 }
-.content text{
-  text-align: center;
-  display: block;
-  margin-bottom: 20rpx;
-}
 .card_container{
   margin-top: 20rpx;
   width: 100%;
   height: 1000rpx;
   align-items: center;
+}
+.resume{
+  margin-top: 60rpx;
+  width: 70%;
+  display: -webkit-box;
+  text-align: center;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all; /* 追加这一行代码 */
+}
+.date{
+  display: block;
+  position: relative;
+  margin-top: 90rpx;
+}
+.title{
+  display: block;
+  position: relative;
+  margin-bottom: 90rpx;
 }
