@@ -30,9 +30,21 @@ Page({
     }
     else{
       console.log("提交数据:", e.detail.value)
-      wx.navigateBack({
-        detail:1
+      wx.showLoading({
+        title: '创建中',
+        duration: 1000,
       })
+      setTimeout(function(){
+        wx.showToast({
+          title: '创建成功',
+          duration:500
+        })
+        setTimeout(function(){
+          wx.navigateBack({
+            detail: 1
+          })
+        },500)      
+      },1000)
     }
   },
 

@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/world0123/me",
-    "pages/contributor/contributor",
-    "pages/add/add"
+    "pages/add/add",
+    "pages/contributor/contributor"
   ],
   "window": {
     "backgroundTextStyle": "light",

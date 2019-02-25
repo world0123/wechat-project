@@ -10,19 +10,23 @@
       <input  name="shorttext" placeholder='简单介绍'></input>
     </view>    
     <view class='itemstyle'>
-      <text>日期</text>
-      <picker mode="date" value="{{date}}" start="2019-02-22" end="2050-12-31" bindchange="bindDateChange" name='d'>
-       : {{d}}
-      </picker>
+      <text>日期:</text>
+      <view class='pickers'>
+        <picker mode="date" value="{{date}}" start="2019-02-22" end="2050-12-31" bindchange="bindDateChange" name='d'>
+           {{d}}
+        </picker>
+      </view>
     </view>
     <view class='itemstyle'>
       <text>是否置顶:</text>
-      <switch class='switchstyle' name='upmost'></switch>
+      <view class='pickers'>
+        <switch class='switchstyle' name='upmost'></switch>
+      </view>  
     </view>
     <view class='itemstyle'>
       <text>封面:</text>
       <input placeholder='修改封面'></input>
     </view>
-    <button form-type='submit'>完成</button>
+    <button form-type='submit' type='primary' class='buttons'>完成</button>
   </form>
 </view>
