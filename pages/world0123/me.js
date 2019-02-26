@@ -142,6 +142,7 @@ Page({
     var index = e.target.dataset.index
     var list = this.data.data
     var item = this.data.data[e.currentTarget.dataset.index]
+    var id = this.data.data[index]._id
     //disX大于某个距离时弹出框
     if (item.right >= 200) {
       item.opacity_value = 0
@@ -151,6 +152,13 @@ Page({
         success: function (res) {
           if (res.confirm) {
             list.splice(index, 1)
+            //删除云端数据
+            db.collection('todos').doc(id).remove({
+              success(res){
+                console.log("删除成功")
+              }
+            })
+            //更新本地列表
             this.setData({
               data: list
             });
