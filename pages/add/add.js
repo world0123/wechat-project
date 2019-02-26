@@ -1,4 +1,5 @@
 // pages/add/add.js
+const db = wx.cloud.database()
 Page({
 
   /**
@@ -7,19 +8,20 @@ Page({
   data: {
     text_name:'',
     upmost:false,
-    d:'2019-02-22',
+    date:'2019-02-22',
     shorttext:''
   },
   //响应选择日期
   bindDateChange: function (e) {
     //console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      d: e.detail.value
+      date: e.detail.value
     })
   },
 
   subdata:function(e)
   {
+    console.log(text_name)
     let {d,shorttext,text_name,upmost} = e.detail.value
     if(!text_name){
       wx.showModal({
@@ -33,6 +35,19 @@ Page({
       wx.showLoading({
         title: '创建中',
         duration: 1000,
+      })
+      db.collection('todos').add({
+        data:{
+          title:text_name,
+          date:this.data.date,
+          content:shorttext,
+          upmost:upmost,
+          opacity_value:1,
+          right:0
+        },
+        success:function(res){
+          console(res.data)
+        }
       })
       setTimeout(function(){
         wx.showToast({

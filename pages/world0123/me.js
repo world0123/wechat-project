@@ -3,17 +3,14 @@ var start_clientX;
 var end_clientX;
 const app = getApp()
 const util = require("../../utils/util.js")
+const db =  wx.cloud.database()
 Page({
   data: {
     windowWidth: wx.getSystemInfoSync().windowWidth,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    data: [{ t: "距离纪念日还有5天", c: '阿丽塔战斗天使阿丽塔战斗天使阿丽塔战斗天使阿丽塔战斗天使阿丽塔战斗天使阿丽塔战斗天使', d: '2019-02-23', right: 0, opacity_value: 1 },
-    { t: "距离纪念日还有3天", c: '阿丽塔战斗天使', d: '2019-02-23', right: 0, opacity_value: 1 },
-    { t: "距离纪念日还有4天", c: '阿丽塔战斗天使', d: '2019-02-23', right: 0, opacity_value: 1 },
-    { t: "距离纪念日还有5天", c: '阿丽塔战斗天使', d: '2019-02-23', right: 0, opacity_value: 1 },
-    { t: "距离纪念日还有8天", c: '阿丽塔战斗天使', d: '2019-02-23', right: 0, opacity_value: 1 }],
+    data: [],
 
     windowHeight: 0,
   },
@@ -80,6 +77,17 @@ Page({
       })
     }
   },
+  onShow:function(){
+    var that = this
+    db.collection('todos').get({
+      success(res) {
+        console.log(res.data)
+        that.setData({
+          data: res.data,
+        })
+      }
+    })    
+  },
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -93,16 +101,6 @@ Page({
     wx.navigateTo({
       url: "../add/add",
     })
-  },
-  onLoad: function (options) {
-    var that = this;
-    wx.getSystemInfo({
-      success: function (res) {
-        that.setData({
-          windowHeight: res.windowHeight
-        });
-      }
-    });
   },
   drawStart: function (e) {
     // console.log("drawStart");  

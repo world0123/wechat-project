@@ -13,7 +13,7 @@
       <text>日期:</text>
       <view class='pickers'>
         <picker mode="date" value="{{date}}" start="2019-02-22" end="2050-12-31" bindchange="bindDateChange" name='d'>
-           {{d}}
+           {{date}}
         </picker>
       </view>
     </view>
