@@ -12,7 +12,7 @@ page{
 .star{
   margin: 20rpx 50rpx;
   background-color: #fff;
-  border-radius: 10rpx;
+  border-radius: 15rpx;
   box-shadow: -8rpx 8rpx 20rpx #e2e2e2;
 }
 
@@ -45,7 +45,7 @@ swiper{
 
 .contributor_bar{
   margin: 20rpx 0;
-  background-color: #dbdbdb;
+  background-color: #e6e6e6;
   transform: scale(0.9);
 }
 
@@ -203,20 +203,20 @@ swiper{
   border-radius: 10rpx;
 }
 .dot0{
-  animation: dot_move0 2s forwards;
+  animation: dot_move0 1.5s forwards;
   animation-delay: 0;
 }
 .dot1{
   animation-delay: .4s;
-  animation: dot_move1 2s forwards;
+  animation: dot_move1 1.5s forwards;
 }
 .dot2{
   animation-delay: .7s;
-  animation: dot_move2 2s forwards;
+  animation: dot_move2 1.5s forwards;
 }
 .dot3{
   animation-delay: 1s;
-  animation: dot_move3 2s forwards;
+  animation: dot_move3 1.5s forwards;
 }
 
 /* dots的移动动画，移动单位130rpx */
@@ -263,22 +263,22 @@ swiper{
   opacity: 0;
 }
 .line0{
-  animation: line_move0 .7s forwards;
+  animation: line_move0 .5s forwards;
   animation-timing-function:ease-in;
   animation-delay: 0;
 }
 .line1{
-  animation: line_move1 .7s forwards;
+  animation: line_move1 .5s forwards;
   animation-timing-function:ease-in;
   animation-delay: .4s;
 }
 .line2{
-  animation: line_move2 .7s forwards;
+  animation: line_move2 .5s forwards;
   animation-timing-function:ease-in;
   animation-delay: .7s;
 }
 .line3{
-  animation: line_move3 .7s forwards;
+  animation: line_move3 .5s forwards;
   animation-timing-function:ease-in;
   animation-delay: 1s;
 }

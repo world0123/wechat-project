@@ -25,7 +25,7 @@ Page({
       }
     ],
     currentItemId: '1',
-    showTimeLine: false,
+    showTimeLine: true,
     dots: [],
     tempDots: [
       {
@@ -44,6 +44,10 @@ Page({
         detail: 'dbbbbbbbbbbd'
       }
     ]
+  },
+
+  onLoad () {
+    this.setData({ dots: this.data.tempDots })
   },
 
   // 复制链接函数
