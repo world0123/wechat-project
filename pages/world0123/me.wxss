@@ -97,7 +97,7 @@ page{
   bottom:0rpx;
 }
 .order_item{
-  border-radius:35rpx; 
+  border-radius:40rpx; 
   display: flex;
   background-size: cover;
   flex-direction: column;

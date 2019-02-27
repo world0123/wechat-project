@@ -81,7 +81,7 @@ Page({
     var that = this
     db.collection('todos').get({
       success(res) {
-        console.log(res.data)
+        console.log(res.data)//下次删除
         that.setData({
           data: res.data,
         })
@@ -139,6 +139,7 @@ Page({
     }
   },
   drawEnd: function (e) {
+    var that = this
     var index = e.target.dataset.index
     var list = this.data.data
     var item = this.data.data[e.currentTarget.dataset.index]
@@ -159,16 +160,16 @@ Page({
               }
             })
             //更新本地列表
-            this.setData({
+            that.setData({
               data: list
             });
           }
           else if (res.cancel) {
             item.right = 0
             item.opacity_value = 1
-            this.setData({
+            that.setData({
               isScroll: true,
-              data: this.data.data,
+              data: that.data.data,
             })
           }
         }
