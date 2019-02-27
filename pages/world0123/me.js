@@ -1,4 +1,5 @@
 // pages/home/home.js
+var that= this;
 var start_clientX;
 var end_clientX;
 const app = getApp()
