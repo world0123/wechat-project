@@ -107,7 +107,7 @@ Page({
     // console.log("drawStart");  
     var touch = e.touches[0]
 
-    for (var index in this.data.data) {
+    for (var index in that.data.data) {
       var item = this.data.data[index]
       item.right = 0
     }

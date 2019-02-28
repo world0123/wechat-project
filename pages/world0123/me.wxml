@@ -25,6 +25,7 @@
     </view>
     <view class="container">
       <scroll-view class='card_container' scroll-y='{{isScroll}}'>
+      <navigator url='../detail/detail?id={{data.id}}' wx:for="{{data}}">
         <block wx:key="item" wx:for="{{data}}">
           <view data-index='{{index}}' class="order_item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx;opacity:{{item.opacity_value}}" >
             <text class='tittle'>{{item.title}}</text><!--t-title ,c-content,d-date-->
@@ -32,6 +33,7 @@
             <text class='date'>{{item.date}}</text>
           </view>
         </block>
+      </navigator>
       </scroll-view>
       <image class="plus-button" src="/image/plus-circle.png" bindtap="addpage"></image>
     </view>

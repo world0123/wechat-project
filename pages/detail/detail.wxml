@@ -1,0 +1,11 @@
+<!--pages/detail.wxml-->
+<text>pages/detail.wxml</text>
+<scroll-view scroll-y="true">
+  <block wx:key="item" wx:for="{{data}}">
+    <view data-index='{{index}}' class="order_item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx;opacity:{{item.opacity_value}}" >
+       <text class='tittle'>{{item.title}}</text><!--t-title ,c-content,d-date-->
+       <text class='resume'>{{item.content}}</text>
+       <text class='date'>{{item.date}}</text>
+    </view>
+   </block>
+</scroll-view>
