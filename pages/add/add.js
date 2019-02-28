@@ -21,7 +21,8 @@ Page({
 
   subdata:function(e)
   {
-    console.log(text_name)
+    //console.log(text_name)
+    this.checkUserName(e)
     let {d,shorttext,text_name,upmost} = e.detail.value
     if(!text_name){
       wx.showModal({
@@ -117,5 +118,22 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  checkUserName: function (param) {
+    let { d, shorttext, text_name, upmost } = param.detail.value
+    //var userid = util.regexConfig().cards; //姓名正则检验
+    //var inputUserName = text_name.trim(); //输入信息确认
+    var wellname = text_name.length; //字符长度确认
+    console.log(text_name, wellname)
+    if (wellname < 7) { //xxx.test是检测函数。
+      return true;
+    } else {
+      wx.showModal({
+        title: '提示',
+        showCancel: false,
+        content: '姓名输入错误'
+      });
+      return false;
+    }
+  },
 })

@@ -3,11 +3,13 @@
   <form class='form_put' bindsubmit='subdata'>
     <view class='itemstyle'><!--表单的具体内容-->
       <text >名称:</text>
-      <input  name="text_name" placeholder='输入名称'></input>
+      <input  name="text_name" placeholder='(不得超过6个字符)'></input>
     </view>
     <view class='itemstyle'><!--表单的具体内容-->
       <text >简介:</text>
-      <input  name="shorttext" placeholder='简单介绍'></input>
+    </view>
+    <view class='itemstyle'><!--表单的具体内容-->
+      <textarea auto-focus="true" style="height: 3em" name = "shorttext" placeholder = "请输入简介"/>
     </view>    
     <view class='itemstyle'>
       <text>日期:</text>
@@ -21,7 +23,7 @@
       <text>是否置顶:</text>
       <view class='pickers'>
         <switch class='switchstyle' name='upmost'></switch>
-      </view>  
+      </view>   
     </view>
     <view class='itemstyle'>
       <text>封面:</text>
