@@ -105,7 +105,7 @@ page{
   height: 300rpx;
   width: 90%;  
   background: url('//bpic.588ku.com/back_pic/04/69/85/25589819f2aac52.jpg!/fh/300/quality/90/unsharp/true/compress/true');
-  padding-top: 50rpx;
+  padding: 10rpx;
   position: relative;
   margin-bottom: 20rpx;
   margin-left: 5%;
@@ -122,16 +122,16 @@ page{
   align-items: center;
 }
 .resume{
-  margin-top: 60rpx;
+  margin-top: 35rpx;
   width: 70%;
-  height: 70rpx;
+  height: 100rpx;
   display: -webkit-box;
   text-align: center;
   overflow : hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp:2;
   -webkit-box-orient: vertical;
-  
+  word-break: break-all;
 }
 .date{
   display: block;

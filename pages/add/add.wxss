@@ -19,10 +19,10 @@ page{
 .form_put view input{
   text-align: right;
   position: absolute;
-  right: 10rpx;
+  right: 40rpx;
 }
 .pickers{
-  right: 10rpx;
+  right: 40rpx;
   position: absolute;
 }
 .buttons{

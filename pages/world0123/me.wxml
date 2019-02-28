@@ -27,7 +27,7 @@
       <scroll-view class='card_container' scroll-y='{{isScroll}}'>
         <block wx:key="item" wx:for="{{data}}">
           <view data-index='{{index}}' class="order_item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx;opacity:{{item.opacity_value}}" >
-            <text class='tittle'>{{item.title}}</text><!--t-title ,c-content,d-date-->
+            <text class='tittle'>距离还有{{item.title}}天</text><!--t-title ,c-content,d-date-->
             <text class='resume'>{{item.content}}</text>
             <text class='date'>{{item.date}}</text>
           </view>
