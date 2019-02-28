@@ -1,10 +1,9 @@
 // pages/home/home.js
-var that= this;
 var start_clientX;
 var end_clientX;
 const app = getApp()
 const util = require("../../utils/util.js")
-const db =  wx.cloud.database()
+const db = wx.cloud.database()
 Page({
   data: {
     windowWidth: wx.getSystemInfoSync().windowWidth,
@@ -50,7 +49,7 @@ Page({
   },
 
 
-   onLoad: function () {
+  onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -78,7 +77,7 @@ Page({
       })
     }
   },
-  onShow:function(){
+  onShow: function () {
     var that = this
     db.collection('todos').get({
       success(res) {
@@ -87,7 +86,7 @@ Page({
           data: res.data,
         })
       }
-    })    
+    })
   },
   getUserInfo: function (e) {
     console.log(e)
@@ -107,7 +106,7 @@ Page({
     // console.log("drawStart");  
     var touch = e.touches[0]
 
-    for (var index in that.data.data) {
+    for (var index in this.data.data) {
       var item = this.data.data[index]
       item.right = 0
     }
@@ -142,9 +141,9 @@ Page({
   drawEnd: function (e) {
     var that = this
     var index = e.target.dataset.index
-    var list = this.data.data
-    var item = this.data.data[e.currentTarget.dataset.index]
-    var id = this.data.data[index]._id
+    var list = that.data.data
+    var item = that.data.data[e.currentTarget.dataset.index]
+    var id = that.data.data[index]._id
     //disX大于某个距离时弹出框
     if (item.right >= 200) {
       item.opacity_value = 0
@@ -156,7 +155,7 @@ Page({
             list.splice(index, 1)
             //删除云端数据
             db.collection('todos').doc(id).remove({
-              success(res){
+              success(res) {
                 console.log("删除成功")
               }
             })
@@ -175,17 +174,17 @@ Page({
           }
         }
       })
-      this.setData({
+      that.setData({
         isScroll: true,
-        data: this.data.data,
+        data: that.data.data,
       })
     } else {
       item.right = 0
       item.opacity_value = 1
-      this.setData({
+      that.setData({
         isScroll: true,
-        data: this.data.data,
+        data: that.data.data,
       })
     }
-  }  
+  }
 })
