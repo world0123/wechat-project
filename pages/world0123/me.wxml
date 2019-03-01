@@ -25,16 +25,16 @@
     <view class="container">
       <scroll-view class='card_container' scroll-y='{{isScroll}}'>
         
-        <navigator url='../detail/detail' wx:key="item" wx:for="{{data}}">
-          <view data-index='{{index}}' class="order_item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx;opacity:{{item.opacity_value}}" >
-            <text class='tittle'>距离还有{{item.title}}天</text><!--t-title ,c-content,d-date-->
+        <navigator url='../detail/detail?id={{item._id}}' wx:key="item" wx:for="{{data}}">
+          <view data-index='{{index}}' class="order_item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx;opacity:{{item.opacity_value}}" id="viewx">
+            <text class='tittle'>距离{{item.title}}还有天</text><!--t-title ,c-content,d-date-->
             <text class='resume'>{{item.content}}</text>
             <text class='date'>{{item.date}}</text>
           </view>
         </navigator>
         
       </scroll-view>
-      <image class="plus-button" src="/image/plus-circle.png" bindtap="addpage"></image>
+        <image class="plus-button" src="/image/plus-circle.png" bindtap="addpage"></image>
     </view>
   </view>
 
