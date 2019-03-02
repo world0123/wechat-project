@@ -1,5 +1,4 @@
 // pages/add/add.js
-var util = require('../../utils/util.js')
 const db = wx.cloud.database()
 Page({
 
@@ -10,13 +9,17 @@ Page({
     text_name:'',
     upmost:false,
     date:'',
-    shorttext:''
+    shorttext:'',
+    day:''
   },
   //响应选择日期
   bindDateChange: function (e) {
     //console.log('picker发送选择改变，携带值为', e.detail.value)
+    var d = this.data.date
+    var day =  this.checkDate(d,e.detail.value)
     this.setData({
-      date: e.detail.value
+      date: e.detail.value,
+      day:day
     })
   },
 
@@ -45,7 +48,8 @@ Page({
           content:shorttext,
           upmost:upmost,
           opacity_value:1,
-          right:0
+          right:0,
+          day:this.data.day
         },
         success:function(res){
           console(res.data)
@@ -69,8 +73,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var date = util.formatTime(new Date());
-    console.log(Date)
+    var util = require('../../utils/util.js')
+    var date = util.formatDate(new Date());
+    this.setData({
+      date:date
+    })
   },
 
   /**
@@ -138,4 +145,12 @@ Page({
       return false;
     }
   },
+  checkDate: function (startTime, endTime){
+    var start_date = new Date(startTime.replace(/-/g, "/"));
+    var end_date = new Date(endTime.replace(/-/g, "/"));
+    var days = end_date.getTime() - start_date.getTime();
+    var day = parseInt(days / (1000 * 60 * 60 * 24));
+    
+    return day;
+  }
 })

@@ -1,5 +1,6 @@
 // pages/detail.js
 const db = wx.cloud.database()
+const app = getApp()
 Page({
 
   /**
@@ -14,19 +15,16 @@ Page({
    */
   onLoad: function (params) {
     var that = this
-    console.log(params.id)
+    //console.log(params.id)
     db.collection('todos').doc(params.id).get({
       success(res) {
-        console.log(res.data)//下次删除
+        console.log(res.data)
         that.setData({
-          datas: res.data,
-          success:function(){
-            console.log("设置成功")
-          }
+          data: res.data,
         })
       }
     })
-  },
+  }, 
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -69,6 +67,7 @@ Page({
   onReachBottom: function () {
 
   },
+
 
   /**
    * 用户点击右上角分享

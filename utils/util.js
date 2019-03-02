@@ -8,7 +8,7 @@ const formatTime = date => {
 
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
-const formatDate = date => {
+function formatDate(date) {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
   const day = date.getDate()
@@ -24,15 +24,4 @@ const formatNumber = n => {
 module.exports = {
   formatTime: formatTime,
   formatDate: formatDate
-}
-function regexCongfig(){
-  var reg = {
-    
-   // cards: /^[\u4e00-\u9fa5]{1,4}$/  姓名汉字正则验证
-  }
-  return reg;
-}
-module.exports = {
-  formatTime:formatTime,
-  regexConfig:regexCongfig
 }
