@@ -18,11 +18,10 @@
   font-size: 32px; 
   text-align: center; 
   color: #ffff; 
-} s
+} 
 .date{ 
   height: 100px; 
   padding:0%; 
   text-align: center; 
   color: #ffff; 
- 
 }
