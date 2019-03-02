@@ -82,64 +82,29 @@
   position:absolute;
   left: 105px;top: 95px;
 }
-.container{
-  padding: 0rpx;
-  align-items: center;
-  width: 100%;
-  height:93%;
-  position: absolute;
-}
 .plus-button{
-  width: 150rpx;
-  height: 150rpx;
+  width: 125rpx;
+  height: 125rpx;
   position: absolute;
   bottom:0rpx;
+  right: 37.5rpx;
+  box-shadow: 10rpx 10rpx 20rpx #aaa;
+  border-radius:100%; 
 }
 .order_item{
   border-radius:35rpx; 
-  background-size: cover;
   height: 300rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;  
-  background: url('//bpic.588ku.com/back_pic/04/69/85/25589819f2aac52.jpg!/fh/300/quality/90/unsharp/true/compress/true');
-  padding-top: 10rpx;
   position: relative;
-  margin-bottom: 20rpx;
-  margin-left:5%;
-  border-bottom: 8rpx solid violet;
-  border-right:4rpx solid violet; 
+  margin: 20rpx 37.5rpx;
+  box-shadow: 10rpx 10rpx 20rpx #aaa;
 }
 
-.order_item text{
-  font-size: 35rpx;
-}
-
-.card_container{
-  margin-top: 20rpx;
-  width: 100%;
-  height: 935rpx;
-  background-color: white;
-  border-bottom-left-radius:35rpx; 
-  border-bottom:5rpx solid violet; 
-  border-bottom-right-radius:35rpx; 
-}
-.resume{
-  margin-top: 55rpx;
+.order_item view{
   width: 70%;
-  height: 95rpx;
-  display: -webkit-box;
+  height: 100rpx;
+  margin: 0 15% ;
   text-align: center;
-  overflow : hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  word-break: break-all; /* 追加这一行代码 */
-}
-.date{
-  display: block;
-  margin-top: 55rpx;
+  vertical-align: middle;
 }
 /*去掉滚动条*/
 ::-webkit-scrollbar{

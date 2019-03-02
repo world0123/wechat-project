@@ -1,5 +1,4 @@
 /* pages/detail.wxss */
-/* pages/detail.wxss */ 
 .body{ 
   height:600px; 
   background-size: 100% 100%; 
