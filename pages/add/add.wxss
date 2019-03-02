@@ -13,7 +13,7 @@ page{
 }
 .itemstyle{
   display: flex;
-  padding: 20rpx 40rpx ;
+  padding: 30rpx 40rpx ;
   border-bottom: 2rpx solid #eee;
 }
 .form_put view input{

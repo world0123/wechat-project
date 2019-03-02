@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    datas:[]
   },
 
   /**
@@ -15,7 +15,7 @@ Page({
    */
   onLoad: function (params) {
     var that = this
-    console.log(params)
+    //console.log(params.id)
     db.collection('todos').doc(params.id).get({
       success(res) {
         console.log(res.data)
@@ -25,6 +25,7 @@ Page({
       }
     })
   }, 
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -67,4 +68,11 @@ Page({
 
   },
 
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
 })

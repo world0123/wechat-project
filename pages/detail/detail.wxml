@@ -1,8 +1,7 @@
 <!--pages/detail.wxml-->
-
 <view class='body'> 
 <view class='title'> 
-  <text>距离还有{{data.title}}天</text> 
+  <text>距离{{data.title}}还有{{data.day}}天</text> 
 </view> 
 <view class='resume'> 
   <text>{{data.content}}</text> 
@@ -11,3 +10,4 @@
   <text>{{data.date}}</text> 
 </view> 
 </view>
+
