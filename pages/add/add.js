@@ -1,4 +1,5 @@
 // pages/add/add.js
+var util = require('../../utils/util.js')
 const db = wx.cloud.database()
 Page({
 
@@ -8,7 +9,7 @@ Page({
   data: {
     text_name:'',
     upmost:false,
-    date:'2019-02-22',
+    date:'',
     shorttext:''
   },
   //响应选择日期
@@ -68,7 +69,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var date = util.formatTime(new Date());
+    console.log(Date)
   },
 
   /**
