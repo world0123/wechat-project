@@ -1,2 +1,13 @@
 <!--pages/detail.wxml-->
-<text>pages/detail.wxml</text>
+
+<view class='body'> 
+<view class='title'> 
+  <text>距离还有{{data.title}}天</text> 
+</view> 
+<view class='resume'> 
+  <text>{{data.content}}</text> 
+</view> 
+<view class='date'> 
+  <text>{{data.date}}</text> 
+</view> 
+</view>

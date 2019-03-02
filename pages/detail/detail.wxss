@@ -1,1 +1,28 @@
 /* pages/detail.wxss */
+/* pages/detail.wxss */ 
+.body{ 
+  height:600px; 
+  background-size: 100% 100%; 
+  background-image: url(http://img3.imgtn.bdimg.com/it/u=3934139407,2044539750&fm=26&gp=0.jpg); 
+} 
+.title{ 
+  height: 150px; 
+  padding: 40px; 
+  font-size: 32px; 
+  text-align: center; 
+  color: #ffff; 
+} 
+.resume{ 
+  height: 100px; 
+  padding: 40px; 
+  font-size: 32px; 
+  text-align: center; 
+  color: #ffff; 
+} s
+.date{ 
+  height: 100px; 
+  padding:0%; 
+  text-align: center; 
+  color: #ffff; 
+ 
+}
