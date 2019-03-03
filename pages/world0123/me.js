@@ -48,6 +48,7 @@ Page({
   },
 
   onLoad: function () {
+    var that = this
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -74,10 +75,6 @@ Page({
         }
       })
     }
-  },
-
-  onShow: function () {
-    var that = this
     db.collection('todos').get({
       success(res) {
         console.log(res.data)//下次删除
@@ -87,6 +84,9 @@ Page({
         })
       }
     })
+  },
+
+  onShow: function () {
   },
 
   getUserInfo: function (e) {
@@ -105,12 +105,7 @@ Page({
   },
 
   drawStart: function (e) {
-    // console.log("drawStart");  
     var touch = e.touches[0]
-    for (var index in this.data.data) {
-      var item = this.data.data[index]
-      item.right = 0
-    }
     this.setData({
       data: this.data.data,
       startX: touch.clientX,
@@ -149,8 +144,10 @@ Page({
       var index = e.target.dataset.index
       var list = that.data.data
       var item = that.data.data[e.currentTarget.dataset.index]
-      var id = this.data.data[index]._id
-      if (item.right >= 200) {
+
+      var id = that.data.data[index]._id
+      //disX大于某个距离时弹出框
+      if (item.right >= 100) {
         item.opacity_value = 0
         wx.showModal({
           title: '提示',

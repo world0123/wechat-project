@@ -6,5 +6,50 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-  background-color: white;
+  background-color: #F8F8F8;
 } 
+@font-face {
+  font-family: 'iconfont';  /* project id 1067994 */
+  src: url('//at.alicdn.com/t/font_1067994_nnnyldpzxq.eot');
+  src: url('//at.alicdn.com/t/font_1067994_nnnyldpzxq.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1067994_nnnyldpzxq.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1067994_nnnyldpzxq.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1067994_nnnyldpzxq.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1067994_nnnyldpzxq.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 32rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jiahao-fill:before {
+  content: "\e660";
+}
+
+.icon-zhiding:before {
+  content: "\e704";
+}
+
+.icon-icon_calendar:before {
+  content: "\eb91";
+}
+
+.icon-icon_compile:before {
+  content: "\eb93";
+}
+
+.icon-icon_ding:before {
+  content: "\eb94";
+}
+
+.icon-icon_next_arrow:after {
+  content: "\eb99";
+}
+
+.icon-icon_photo:before {
+  content: "\eb9a";
+}

@@ -44,20 +44,22 @@
       <image bindtouchend='showview' class='icon_user' src='../../resourse/1.png'></image>
       <text class='txt'>纪念日</text>
     </view>
-    <view class="container">
+    
       <scroll-view class='card_container' scroll-y='{{isScroll}}'>
-        
-        <navigator url='../detail/detail?id={{item._id}}&index={{index}}' wx:key="item" wx:for="{{data}}">
-          <view data-index='{{index}}' class="order_item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx;opacity:{{item.opacity_value}}" id="viewx">
-            <text class='tittle'>距离{{item.title}}还有{{item.day}}天</text><!--t-title ,c-content,d-date-->
-            <text class='resume'>{{item.content}}</text>
-            <text class='date'>{{item.date}}</text>
+        <navigator url='../detail/detail?id={{item._id}}' wx:key="items" wx:for="{{data}}">
+          <view data-index='{{index}}' class="order_item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx;opacity:{{item.opacity_value}};background:white url('/image/img.jpg') no-repeat;background-size: cover;" id="viewx" >
+            <view><text class='tittle'>距离{{item.title}}还有{{item.day}}天</text></view><!--t-title ,c-content,d-date-->            
+            <view>
+              <text wx:if='{{item.content.length<20}}'>{{item.content}}</text>
+              <text wx:else>{{item.absContent}}...</text>
+            </view>
+            <view style='padding-top:40rpx'><text>{{item.date}}</text></view>
+
           </view>
         </navigator>
         
       </scroll-view>
-        <image class="plus-button" src="/image/plus-circle.png" bindtap="addpage"></image>
-    </view>
+        <image class="plus-button" src="/image/plus.png" bindtap="addpage"></image>
   </view>
 
 </view>

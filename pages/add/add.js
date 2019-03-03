@@ -10,7 +10,7 @@ Page({
     upmost:false,
     date:'',
     shorttext:'',
-    day:''
+    day:'0'
   },
   //响应选择日期
   bindDateChange: function (e) {
@@ -49,7 +49,8 @@ Page({
           upmost:upmost,
           opacity_value:1,
           right:0,
-          day:this.data.day
+          day:this.data.day,
+          absContent:shorttext.slice(0,20)
         },
         success:function(res){
           console(res.data)
@@ -152,5 +153,11 @@ Page({
     var day = parseInt(days / (1000 * 60 * 60 * 24));
     
     return day;
+  },
+  picture:function()
+  {
+    wx.navigateTo({
+      url: '../picture/picture',
+    })
   }
 })

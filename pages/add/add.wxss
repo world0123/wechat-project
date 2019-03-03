@@ -6,7 +6,7 @@ page{
 .switchstyle{
   padding: 0rpx 0rpx;
   border-bottom: 0rpx;
-  align-items: right;
+  align-items: right；
 }
 .container{
   padding: 0rpx 0rpx; 
@@ -14,7 +14,15 @@ page{
 .itemstyle{
   display: flex;
   padding: 30rpx 40rpx ;
-  border-bottom: 2rpx solid #eee;
+  vertical-align: center;
+  border-bottom: 2rpx solid #aaa;
+  font-size: 32rpx;
+}
+.textarea_warp{
+  padding: 30rpx 40rpx ;
+  font-size: 32rpx;
+  background-color: #fff;
+  border: 2rpx solid #aaa
 }
 .form_put view input{
   text-align: right;
