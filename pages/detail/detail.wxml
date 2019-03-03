@@ -1,13 +1,22 @@
 <!--pages/detail.wxml-->
-<view class='body'> 
+<view class='body' style='background-image:url({{Image}});background-size:100% 100%' bindtap='ImageChange'> 
 <view class='title'> 
   <text>距离{{data.title}}还有{{data.day}}天</text> 
-</view> 
-<view class='resume'> 
-  <text>{{data.content}}</text> 
 </view> 
 <view class='date'> 
   <text>{{data.date}}</text> 
 </view> 
+<view class='resume'> 
+  <text>{{data.content}}</text> 
+</view> 
+<view class='main'>
+  <view class='tapbar' style='opacity:{{0.6}}'>
+     <image src='../../resourse/homepage.png' class='img' bindtap='GoHome'></image>
+     <image src='../../resourse/brush.png' class='img' bindtap='Write'></image>
+     <image src='../../resourse/empty.png' class='img' bindtap='Delete'></image>
+     <!--button open-type='share' class="img"  plain='true' style='background-color:#ff00ff'></button-->
+     <image src='../../resourse/share.png' class='img' bindtap='share'></image>
+  </view>
+</view>
 </view>
 

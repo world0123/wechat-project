@@ -11,7 +11,6 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     data: [],
-
     windowHeight: 0,
   },
   // 滑动开始
@@ -48,14 +47,13 @@ Page({
     })
   },
 
-
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+        hasUserInfo:true
       })
-    } else if (this.data.canIUse) {
+    }else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
@@ -77,17 +75,20 @@ Page({
       })
     }
   },
+
   onShow: function () {
     var that = this
     db.collection('todos').get({
       success(res) {
         console.log(res.data)//下次删除
+        app.data = res.data
         that.setData({
-          data: res.data,
+          data: res.data
         })
       }
     })
   },
+
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -96,16 +97,16 @@ Page({
       hasUserInfo: true
     })
   },
-  addpage: function () {
 
+  addpage: function () {
     wx.navigateTo({
       url: "../add/add",
     })
   },
+
   drawStart: function (e) {
     // console.log("drawStart");  
     var touch = e.touches[0]
-
     for (var index in this.data.data) {
       var item = this.data.data[index]
       item.right = 0
@@ -114,10 +115,10 @@ Page({
       data: this.data.data,
       startX: touch.clientX,
     })
-
   },
+
   drawMove: function (e) {
-    if(e.target.id=="viewx"){
+    if (e.target.id == "viewx") {
       var index = e.target.dataset.index
       var touch = e.touches[0]
       var item = this.data.data[index]
@@ -139,16 +140,16 @@ Page({
           data: this.data.data
         })
       }
-  }
+    }
   },
+
   drawEnd: function (e) {
-    if (e.target.id == "viewx"){
+    if (e.target.id == "viewx") {
       var that = this
       var index = e.target.dataset.index
       var list = that.data.data
       var item = that.data.data[e.currentTarget.dataset.index]
-      var id = that.data.data[index]._id
-      //disX大于某个距离时弹出框
+      var id = this.data.data[index]._id
       if (item.right >= 200) {
         item.opacity_value = 0
         wx.showModal({
@@ -191,5 +192,20 @@ Page({
         })
       }
     }
-  }
+  },
+  GoHome: function () {
+    wx.navigateTo({
+      url: '../world0123/me',
+    })
+  },
+  GoAdd: function () {
+    wx.navigateTo({
+      url: '../add/add',
+    })
+  },
+  GoContributor: function () {
+    wx.navigateTo({
+      url: '../contributor/contributor',
+    })
+  },
 })

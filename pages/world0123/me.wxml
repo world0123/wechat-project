@@ -4,12 +4,34 @@
   <view class="page_tab">
     <view class="page_tab_content">
        <view class="userinfo">
-          <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+          <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" style='left:-55px;top:20px'> 获取头像昵称 </button>
           <block wx:else>
             <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
           </block>
           <text class="userinfo-nickname">{{userInfo.nickName}}</text>
         </view>
+        <view class='wc' style='margin-top:40px;' bindtap='GoHome'>
+          <image src='../../resourse/homepage_fill.png' class='pageimg'></image>
+          <text class='pagetxt'>首页</text>
+        </view>
+        <view class='wc' bindtap='GoAdd'>
+          <image src='../../resourse/addition_fill.png' class='pageimg'></image>
+          <text class='pagetxt'>添加</text>
+        </view>
+        <view class='wc' bindtap='GoContributor'>
+          <image src='../../resourse/businesscard_fill.png' class='pageimg'></image>
+          <text class='pagetxt'>关于</text>
+        </view>
+        <!--view class='wc'>
+          <image src='../../resourse/share_fill.png' class='pageimg'></image>
+          <text class='pagetxt'>分享</text>
+        </view-->
+        <button open-type='share' style="border:0; height:50px;width:300px;position:absolute;left:0;" plain='true'>
+          <view style='line-height:20px;display:flex;align-items:center'>
+            <image src='../../resourse/share_fill.png' style='height:30px;width:30px;margin-top:10px' class='pageimg'></image>
+            <text style='font-size:32rpx'>分享</text>
+          </view>
+        </button>
     </view>
   </view>
 
@@ -25,7 +47,7 @@
     <view class="container">
       <scroll-view class='card_container' scroll-y='{{isScroll}}'>
         
-        <navigator url='../detail/detail?id={{item._id}}' wx:key="item" wx:for="{{data}}">
+        <navigator url='../detail/detail?id={{item._id}}&index={{index}}' wx:key="item" wx:for="{{data}}">
           <view data-index='{{index}}' class="order_item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx;opacity:{{item.opacity_value}}" id="viewx">
             <text class='tittle'>距离{{item.title}}还有{{item.day}}天</text><!--t-title ,c-content,d-date-->
             <text class='resume'>{{item.content}}</text>
