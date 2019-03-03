@@ -153,5 +153,11 @@ Page({
     var day = parseInt(days / (1000 * 60 * 60 * 24));
     
     return day;
+  },
+  picture:function()
+  {
+    wx.navigateTo({
+      url: '../picture/picture',
+    })
   }
 })

@@ -1,0 +1,9 @@
+<!--pages/picture/picture.wxml-->
+<view >
+  <image src='/image/img1.jpg' class="image"></image>
+  <image src='/image/img2.jpg'></image>
+  <image src='/image/img3.jpg'></image>
+  <image src='/image/img4.jpg'></image>
+  <image src='/image/img5.jpg'></image>
+  <image src='/image/img6.jpg'></image>
+</view>

@@ -2,11 +2,11 @@
 <view class='container'>
   <form class='form_put' bindsubmit='subdata'>
     <view class='itemstyle'><!--表单的具体内容-->
-      <text >名称:</text>
-      <input  name="text_name" placeholder='(不得超过6个字符)'></input>
+      <icon class='iconfont icon-icon_ding'> 名称：</icon>  
+      <input  name="text_name" placeholder='请输入'></input>
     </view>
     <view class='itemstyle'>
-      <text>日期:</text>
+      <icon class='iconfont icon-icon_calendar'> 选择日期：</icon>  
       <view class='pickers'>
         <picker mode="date" value="{{date}}" start="2019-02-22" end="2050-12-31" bindchange="bindDateChange" name='d'>
            {{date}}
@@ -14,20 +14,20 @@
       </view>
     </view>
     <view class='itemstyle'>
-      <text>是否置顶:</text>
+      <icon class='iconfont icon-zhiding'> 是否置顶：</icon> 
       <view class='pickers'>
         <switch class='switchstyle' name='upmost'></switch>
       </view>   
     </view>
     <view class='itemstyle'>
-      <text>封面:</text>
-      <input placeholder='修改封面'></input>
+      <icon class='iconfont icon-icon_photo'> 修改封面：</icon>  
+      <view class='pickers'><icon class='iconfont icon-icon_next_arrow' bindtap='picture'>点击修改</icon></view>
     </view>
-    <view class='itemstyle' style='border-bottom:0rpx;'> <!--表单的具体内容-->
-      <text >简介:</text>
+    <view class='itemstyle' style='border-bottom:0rpx;'>
+      <icon class='iconfont icon-icon_compile'> 输入简介：</icon>  
     </view>
-    <view class='itemstyle'><!--表单的具体内容-->
-      <textarea auto-focus="true" style="height: 3em" name = "shorttext" placeholder = "请输入简介"/>
+    <view class='textarea_warp'>
+      <textarea auto-focus='ture' style="height: 3em ;" name = "shorttext" placeholder = "请输入简介"/>
     </view>    
     <button form-type='submit' type='primary' class='buttons'>完成</button>
   </form>

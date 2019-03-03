@@ -86,9 +86,9 @@
   width: 125rpx;
   height: 125rpx;
   position: absolute;
-  bottom:0rpx;
+  bottom:10rpx;
   right: 37.5rpx;
-  box-shadow: 10rpx 10rpx 20rpx #aaa;
+  box-shadow: 10rpx 10rpx 10rpx #c5c5c5;
   border-radius:100%; 
 }
 .order_item{
@@ -96,7 +96,7 @@
   height: 300rpx;
   position: relative;
   margin: 20rpx 37.5rpx;
-  box-shadow: 10rpx 10rpx 20rpx #aaa;
+  box-shadow: 10rpx 10rpx 10rpx #c5c5c5;
 }
 
 .order_item view{

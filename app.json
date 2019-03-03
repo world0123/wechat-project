@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/picture/picture",
     "pages/world0123/me",
     "pages/add/add",
     "pages/contributor/contributor",
