@@ -26,6 +26,7 @@ Page({
     ],
     currentItemId: '1',
     showTimeLine: true,
+    showAnimation: false,
     dots: [],
     tempDots: [
       {
@@ -94,6 +95,7 @@ Page({
   // 控制timeline展示状态函数
   showTimeLine () {
     this.setData({
+      showAnimation: true,
       showTimeLine: !this.data.showTimeLine,
       dots: this.data.tempDots
     })

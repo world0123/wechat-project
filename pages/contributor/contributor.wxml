@@ -63,8 +63,38 @@
         style="{{showTimeLine ? 'animation: show .7s forwards;' : 'animation: hide .7s forwards;'}}"></span>
     </view>
 
-    <!-- 时间轴的绘制 -->
-    <view class='time_line_bar'
+    <!-- 静态时间轴的绘制 -->
+    <view class='time_line_bar' hidden="{{showAnimation}}">
+      
+      <!-- 完成庆祝 -->
+      <view class='done' hidden='{{!showTimeLine}}'>
+        <image src='../../image/success.png'></image>
+      </view>
+
+      <!-- 项目经过 -->
+      <view wx:for="{{dots}}" wx:key="{{index}}">
+        <!-- 时间点 -->
+        <view class='time_dot dot_{{index}}'>
+          <image src="{{item.avatarUrl}}"></image>
+        </view>
+
+        <!-- 对话框左侧三角 -->
+        <view class='tris detail_{{index}}'></view>
+
+        <!-- 时间线 -->
+        <view class='line line_{{index}}'>
+        </view>
+
+        <!-- 时间点对应详情 -->
+        <view class='detail detail_{{index}}'>
+          <a>{{item.time}}</a>
+          <view class='detail_info'>{{item.detail}}</view>
+        </view>
+      </view>
+    </view>  
+
+    <!-- 动态时间轴的绘制 -->
+    <view class='time_line_bar' hidden='{{!showAnimation}}'
       style="{{showTimeLine ? 'animation: increase_height .8s forwards;':'animation: recover_height .6s forwards;'}}">
       
       <!-- 完成庆祝 -->
@@ -93,6 +123,7 @@
         </view>
       </view>
     </view>
+
   </view>
 
   <view class='star'>

@@ -8,11 +8,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    datas:[],
+    data:{},
     Image:img,
     index:null,
     id:null,
     list:[],
+    visible: false
   },
 
   /**
@@ -27,9 +28,9 @@ Page({
     })
     db.collection('todos').doc(params.id).get({
       success(res) {
-        //console.log(res.data)
+        console.log('detail data ', res.data)
         that.setData({
-          data: res.data,
+          data: res.data
         })
       }
     })
@@ -139,8 +140,17 @@ Page({
     })
   },
 
-  share:function(){
-    
+  // 展示/隐藏分享页面
+  share: function () {
+    console.log('click share')
+    this.setData({
+      visible: true
+    })
+  },
+  close: function () {
+    this.setData({ 
+      visible: false 
+    })
   },
 
 

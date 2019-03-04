@@ -147,7 +147,7 @@ swiper{
 }
 
 .time_line_bar{
-  /* min-height: 40rpx; */
+  min-height: 510rpx;
   border-top: 1px solid #e2e2e2;
   position: relative;
 }
@@ -194,13 +194,25 @@ swiper{
   top: 20rpx;
   left: 20rpx;
   padding: 0;
-  opacity: .2;
+  opacity: 1;
   z-index: 1;
 }
 .time_dot image{
   width: 50rpx;
   height: 50rpx;
   border-radius: 10rpx;
+}
+.dot_0{
+  top: 150rpx;
+}
+.dot_1{
+  top: 280rpx;
+}
+.dot_2{
+  top: 410rpx;
+}
+.dot_3{
+  top: 540rpx;
 }
 .dot0{
   animation: dot_move0 1.5s forwards;
@@ -260,7 +272,19 @@ swiper{
   width: 10rpx;
   height: 120rpx;
   background-color: #dddee1;
-  opacity: 0;
+  opacity: 1;
+}
+.line_0{
+  top: 20rpx;
+}
+.line_1{
+  top: 150rpx;
+}
+.line_2{
+  top: 280rpx;
+}
+.line_3{
+  top: 410rpx;
 }
 .line0{
   animation: line_move0 .5s forwards;
@@ -318,6 +342,18 @@ swiper{
 }
 .detail a{
   font-weight: bold;
+}
+.detail_0{
+  top: 150rpx;
+}
+.detail_1{
+  top: 280rpx;
+}
+.detail_2{
+  top: 410rpx;
+}
+.detail_3{
+  top: 540rpx;
 }
 .detail0{
   top: 150rpx;
