@@ -41,6 +41,13 @@ Page({
         title: '创建中',
         duration: 1000,
       })
+
+      var absContent
+      if (shorttext.length > 29) {
+        absContent = shorttext.slice(0, 23) + '...'
+      } else {
+        absContent = shorttext
+      }
       db.collection('todos').add({
         data:{
           title:text_name,
@@ -50,7 +57,7 @@ Page({
           opacity_value:1,
           right:0,
           day:this.data.day,
-          absContent:shorttext.slice(0,20)
+          absContent: absContent
         },
         success:function(res){
           console(res.data)
