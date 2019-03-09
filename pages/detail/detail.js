@@ -1,7 +1,7 @@
 // pages/detail.js
 const db = wx.cloud.database()
 const app = getApp()
-var img ='https://raw.githubusercontent.com/world0123/hello-world/master/1.jpg'
+var img = '../../image/img'
 Page({
 
   /**
@@ -9,11 +9,11 @@ Page({
    */
   data: {
     data:{},
-    Image:img,
+    Image:'',
     index:null,
     id:null,
     list:[],
-    visible: false
+    visible: false,
   },
 
   /**
@@ -28,24 +28,17 @@ Page({
     })
     db.collection('todos').doc(params.id).get({
       success(res) {
-        console.log('detail data ', res.data)
         that.setData({
-          data: res.data
+          data: res.data,
+          Image:img+res.data.bgindex+'jpg'
         })
       }
     })
     db.collection('todos').get({
       success(res) {
-        console.log(res.data)
         that.setData({
           list: res.data,
         })
-      }
-    })
-    wx.request({
-      url: 'https://github.com/world0123/hello-world.git',
-      success:function(res){
-         //console.log(res)
       }
     })
   }, 
@@ -93,8 +86,9 @@ Page({
   },
 
   ImageChange(){
-    var i = Math.floor(Math.random()*10+1)
-    img = 'https://raw.githubusercontent.com/world0123/hello-world/master/'+i+'.jpg'
+    var i = this.data.data.bgindex
+    console.log(i)
+    img = '../../image/img'+i+'.jpg'
     this.setData({
       Image:img
     })
