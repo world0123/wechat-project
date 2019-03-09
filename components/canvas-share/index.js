@@ -122,11 +122,13 @@ Component({
       const item = this.properties.item
 
       // 绘制title
+      console.log('====canvas==== title: ',this.properties.item.title)
+      var title = this.properties.item.title
       ctx.setTextAlign('center')
       ctx.setFontSize(80)
       ctx.setFillStyle('#ffffff')
       ctx.fillText(
-        '过年',
+        title,
         canvasW / 2,
         beginY,
       )
@@ -137,10 +139,12 @@ Component({
       const YTwo = rpx2px(110 * 2)
 
       // 绘制日期
+      console.log('====canvas==== date: ', this.properties.item.date)
+      var date = this.properties.item.date
       ctx.setTextAlign('center')
       ctx.setFontSize(50)
       ctx.setFillStyle('#ffffff')
-      ctx.fillText('2018年12月10日', canvasW / 2, beginY + YTwo)
+      ctx.fillText(date, canvasW / 2, beginY + YTwo)
       ctx.stroke()
 
       // 绘制第三行内容----------------------------------
@@ -148,6 +152,8 @@ Component({
       const YThree = rpx2px(400 * 2)
 
       // 绘制倒计时数字
+      console.log('====canvas==== day: ', this.properties.item.day)
+      var day = this.properties.item.day
       const bold = rpx2px(4 * 2)
       ctx.setTextAlign('center')
       ctx.setFontSize(170)
@@ -161,21 +167,56 @@ Component({
       ctx.stroke()
 
       // 绘制倒计时文字
-      // 后期动态改变距离
+      // var len = day.toString().length
+      var len = 2
+      var marginL, marginR
+      switch (len) {
+        case 1:
+          marginL = rpx2px(120 * 2)
+          marginR = rpx2px(100 * 2)
+          break
+        case 2:
+          marginL = rpx2px(160 * 2)
+          marginR = rpx2px(130 * 2)
+          break
+        case 3:
+          marginL = rpx2px(225 * 2)
+          marginR = rpx2px(195 * 2)
+          break
+        case 4:
+          marginL = rpx2px(280 * 2)
+          marginR = rpx2px(240 * 2)
+          break
+      }
+
       ctx.setTextAlign('center')
       ctx.setFontSize(50)
       ctx.setFillStyle('#ffffff')
-      ctx.fillText('已经', canvasW / 2 - rpx2px(160 * 2), beginY + YThree)
-      ctx.fillText('天', canvasW / 2 + rpx2px(130 * 2), beginY + YThree)
+      // ctx.fillText('已经', canvasW / 2 - rpx2px(160 * 2), beginY + YThree)
+      // ctx.fillText('天', canvasW / 2 + rpx2px(130 * 2), beginY + YThree)
+      ctx.fillText('已经', canvasW / 2 - marginL, beginY + YThree)
+      ctx.fillText('天', canvasW / 2 + marginR, beginY + YThree)
       ctx.stroke()
 
-      // 绘制第四行内容--------------------------
+      // 绘制第四行详情内容--------------------------
       // 设置距首行距离
+      console.log('====canvas==== content: ', this.properties.item.content)
+      var content = this.properties.item.content
       const YFour = rpx2px(620 * 2)
+      const lineHeight = rpx2px(62 * 2)
+      const contentWidth = canvasWidth * 3/4
+      const fontSize = 50
+
+      var td = Math.ceil(contentWidth / fontSize)
+      var tr = Math.ceil(content.length / td)
+
       ctx.setTextAlign('center')
-      ctx.setFontSize(50)
+      ctx.setFontSize(fontSize)
       ctx.setFillStyle('#ffffff')
-      ctx.fillText('已dfasdfdsaf 经', canvasW / 2, beginY + YFour)
+      for (var i=0; i<tr; i++) {
+        var text = content.substring(i*td, (i+1)*td)
+        ctx.fillText(text, canvasW / 2, beginY + YFour + i*lineHeight)
+      }
       ctx.stroke()
 
       // 底部遮罩层

@@ -56,14 +56,7 @@
               <text>{{item.absContent}}</text>
             </view>
             <view style='padding-top:40rpx'><text>{{item.date}}</text></view>
-            <!-- 
-            <view>
-              <span class='随便起'>D</span> // 设置样式，加粗，字体字号大一些
-              <view>{{显示-3什么的}}</view>
-            </view>
-            <view>{{title}}</view>
-            <view>{{data}}</view>   // 注意间距的设置，照图片上，间距就挺好
-            -->
+            
           </view>
         </navigator>
         

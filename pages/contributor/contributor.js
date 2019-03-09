@@ -63,8 +63,13 @@ Page({
       data = this.data.contributors[id].qq
       Toast = 'QQ号已复制'
     } else {
-      data = this.data.contributors[id].github
-      Toast = 'Github链接已复制'
+      if (e.currentTarget.dataset.type == 'Github') {
+        data = this.data.contributors[id].github
+        Toast = 'Github链接已复制'
+      } else {
+        data = 'https://github.com/world0123/wechat-project'
+        Toast = '项目地址已复制'
+      }
     }
 
     // 设置粘贴板内容

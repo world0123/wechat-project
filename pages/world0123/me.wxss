@@ -103,6 +103,8 @@
   box-shadow: 10rpx 10rpx 10rpx #c5c5c5;
   border-radius:100%; 
 }
+
+
 .order_item{
   border-radius:35rpx; 
   height: 300rpx;
@@ -120,6 +122,7 @@
   font-weight: bold;
   margin-top: 20rpx;
 }
+
 /*去掉滚动条*/
 ::-webkit-scrollbar{
 width: 0;
