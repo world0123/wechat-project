@@ -24,9 +24,8 @@ Page({
   },
 
   subdata:function(e)
-  {
-    //console.log(text_name)
-    this.checkUserName(e)
+  {//获取选择的图片
+    var cargo = wx.getStorageSync("cargo")
     let {d,shorttext,text_name,upmost} = e.detail.value
     if(!text_name){
       wx.showModal({
@@ -53,11 +52,12 @@ Page({
           title:text_name,
           date:this.data.date,
           content:shorttext,
-          upmost:upmost,
+          prority:upmost,
           opacity_value:1,
           right:0,
           day:this.data.day,
-          absContent: absContent
+          absContent: absContent,
+          bgindex:cargo
         },
         success:function(res){
           console(res.data)
@@ -166,5 +166,6 @@ Page({
     wx.navigateTo({
       url: '../picture/picture',
     })
-  }
+  },
+
 })

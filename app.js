@@ -19,23 +19,11 @@ App({
     wx.setStorageSync('logs', logs)
 
     // 登录
-    wx.login({
-      success: function(loginCode) {
+
+      
         //小程序秘钥e75b5fc8e3766414fd8fa7309008a5f0
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        var appid = 'wx10f52c7b7b0fdcd2';
-        var secret = 'e75b5fc8e3766414fd8fa7309008a5f0';
-        wx.request({
-            url: 'https://api.weixin.qq.com/sns/jscode2session?appid=‘+<code></code>appid+’&secret=‘+secret+’&grant_type=authorization_code&js_code=' + loginCode.code,
-            header: {
-              'content-type': 'application/json'
-            },
-            success: function (res) {
-              console.log(res.data) //获取openid  
-            }
-          }) 
-      }
-    })
+
     // 获取用户信息
     wx.getSetting({
       success: res => {

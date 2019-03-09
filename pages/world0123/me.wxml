@@ -44,24 +44,38 @@
       <image bindtouchend='showview' class='icon_user' src='../../resourse/1.png'></image>
       <text class='txt'>纪念日</text>
     </view>
-    
-      <scroll-view class='card_container' scroll-y='{{isScroll}}'>
+    <scroll-view class='card_container' scroll-y='{{isScroll}}'>
         <navigator url='../detail/detail?id={{item._id}}' wx:key="items" wx:for="{{data}}">
-          <view data-index='{{index}}' class="order_item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx;opacity:{{item.opacity_value}};background:white url('/image/img.jpg') no-repeat;background-size: cover;" id="viewx" >
+          <view data-index='{{index}}' class="order_item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx;opacity:{{item.opacity_value}};" id="viewx" >
             <view>
-              <text class='title'>距离{{item.title}}还有{{item.day}}天</text></view>
-            <view>
-              <!-- <text wx:if='{{item.content.length<20}}'>{{item.content}}</text>
-              <text wx:else>{{item.absContent}}...</text> -->
-              <text>{{item.absContent}}</text>
+              <span class='emmmm'>D</span>
+              <text class='emmmm'>{{item.day}}</text>
             </view>
+            <view>
+              <text class='title'>{{item.title}} </text>
+              <!---
+              <text wx:if='{{item.content.length<20}}'>{{item.content}}</text>
+              <text wx:else>{{item.absContent}}...</text>
+              -->
+            </view>
+<<<<<<< HEAD
             <view style='padding-top:40rpx'><text>{{item.date}}</text></view>
             
+=======
+            <view class='date'><text>{{item.date}}</text></view>
+            <!-- 
+            <view>
+              <span class='随便起'>D</span> // 设置样式，加粗，字体字号大一些
+              <view>{{显示-3什么的}}</view>
+            </view>
+            <view>{{title}}</view>
+            <view>{{data}}</view>   // 注意间距的设置，照图片上，间距就挺好
+            -->
+>>>>>>> 3f9464457b8c838ef135c7b23a109be139c355f6
           </view>
         </navigator>
-        
-      </scroll-view>
-        <image class="plus-button" src="/image/plus.png" bindtap="addpage"></image>
+    </scroll-view>
+    <image class="plus-button" src="/image/plus.png" bindtap="addpage"></image>
   </view>
 
 </view>
