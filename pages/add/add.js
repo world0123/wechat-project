@@ -10,7 +10,8 @@ Page({
     upmost:false,
     date:'',
     shorttext:'',
-    day:'0'
+    day:'0',
+    bgindex:'1'
   },
   //响应选择日期
   bindDateChange: function (e) {
