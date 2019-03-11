@@ -6,6 +6,7 @@
 }  
 .card_container{
   height: 93%;
+  color: #008080;
 }
 /* 主页 */  
 .home {  
@@ -103,8 +104,6 @@
   position: absolute;
   bottom:10rpx;
   right: 37.5rpx;
-  box-shadow: 10rpx 10rpx 10rpx #c5c5c5;
-  border-radius:100%; 
 }
 
 

@@ -75,7 +75,7 @@
           </view>
         </navigator>
     </scroll-view>
-    <image class="plus-button" src="/image/plus.png" bindtap="addpage"></image>
+    <image class="plus-button" src="/image/plus1.png" bindtap="addpage"></image>
   </view>
 
 </view>
