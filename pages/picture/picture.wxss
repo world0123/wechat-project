@@ -3,12 +3,12 @@ page{
   padding: 20rpx;
   background-color:#cacaca 
 }
-view image{
+.imagestyle{
   width: 220rpx;
   margin: 10rpx;
   height: 300rpx;
   box-shadow: 10rpx 10rpx 20rpx #aaa 
 }
 .image{
-  border:5rpx solid #fff 
+  padding:5rpx solid #fff 
 }

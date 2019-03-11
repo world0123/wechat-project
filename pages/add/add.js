@@ -10,7 +10,8 @@ Page({
     upmost:false,
     date:'',
     shorttext:'',
-    day:'0'
+    day:'0',
+    bgindex:'1'
   },
   //响应选择日期
   bindDateChange: function (e) {
@@ -24,9 +25,8 @@ Page({
   },
 
   subdata:function(e)
-  {
-    //console.log(text_name)
-    this.checkUserName(e)
+  {//获取选择的图片
+    var cargo = wx.getStorageSync("cargo")
     let {d,shorttext,text_name,upmost} = e.detail.value
     if(!text_name){
       wx.showModal({
@@ -41,16 +41,24 @@ Page({
         title: '创建中',
         duration: 1000,
       })
+
+      var absContent
+      if (shorttext.length > 29) {
+        absContent = shorttext.slice(0, 23) + '...'
+      } else {
+        absContent = shorttext
+      }
       db.collection('todos').add({
         data:{
           title:text_name,
           date:this.data.date,
           content:shorttext,
-          upmost:upmost,
+          prority:upmost,
           opacity_value:1,
           right:0,
           day:this.data.day,
-          absContent:shorttext.slice(0,20)
+          absContent: absContent,
+          bgindex:cargo
         },
         success:function(res){
           console(res.data)
@@ -159,5 +167,6 @@ Page({
     wx.navigateTo({
       url: '../picture/picture',
     })
-  }
+  },
+
 })

@@ -128,7 +128,13 @@ Page({
         this.setData({
           data: this.data.data
         })
-      } else {
+      }else if(disX>300){
+        item.right = 300
+        this.setData({
+          data:this.data.data
+        })
+      }
+       else {
         item.right = 0
         item.opacity_value = 1
         this.setData({

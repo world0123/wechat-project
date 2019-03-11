@@ -1,7 +1,7 @@
 // pages/detail.js
 const db = wx.cloud.database()
 const app = getApp()
-var img ='https://raw.githubusercontent.com/world0123/hello-world/master/1.jpg'
+var img = '../../image/img'
 Page({
 
   /**
@@ -9,24 +9,19 @@ Page({
    */
   data: {
     data:[],
-    Image:img,
-    id:'',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (params) {
-    var that = this
-    console.log(params)
-    that.setData({
-      id:params.id,
-    })
+    var that=this
     db.collection('todos').doc(params.id).get({
       success(res) {
-        //console.log(res.data)
+        console.log(res.data)//下次删除
+        console.log(res.data)
         that.setData({
-          data: res.data,
+          data: res.data
         })
       }
     })
@@ -75,7 +70,6 @@ Page({
 
   },
 
-
   GoHome:function(){
     wx.navigateTo({
       url: '../world0123/me',
@@ -90,8 +84,17 @@ Page({
    
   },
 
-  share:function(){
-    
+  // 展示/隐藏分享页面
+  share: function () {
+    console.log('click share')
+    this.setData({
+      visible: true
+    })
+  },
+  close: function () {
+    this.setData({ 
+      visible: false 
+    })
   },
 
 

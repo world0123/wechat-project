@@ -1,11 +1,10 @@
 // pages/picture/picture.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    data:['1','2','3','4','5','6']
   },
 
   /**
@@ -13,6 +12,21 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+  chosepicture:function(e){
+    var index = e.target.dataset.index
+    wx.setStorageSync("cargo", index+1)
+    wx.showToast({
+          title: '成功',
+          icon:'success',
+          duration: 1000,
+        })
+    setTimeout(
+      function(){
+        wx.navigateBack({
+          detail:1
+        })
+      },1000)
   },
 
   /**
