@@ -1,5 +1,6 @@
 <!--pages/detail.wxml-->
-<view class='body' style='background-image:url({{Image}});background-size:100% 100%' bindtap='ImageChange'> 
+<view style='height:22px;'></view>
+<view class='body'> 
 <view class='title'> 
   <text>距离{{data.title}}还有{{data.day}}天</text> 
 </view> 

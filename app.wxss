@@ -6,7 +6,7 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-  background-color: #F8F8F8;
+  background-color: rgb(255, 255, 255);
 } 
 @font-face {
   font-family: 'iconfont';  /* project id 1067994 */

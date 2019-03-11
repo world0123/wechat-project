@@ -12,6 +12,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     data: [],
     windowHeight: 0,
+    bgColor:'',
   },
   // 滑动开始
   touchstart: function (e) {

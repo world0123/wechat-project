@@ -1,37 +1,29 @@
 <view class="page" bindtouchend='touchend' bindtouchstart='touchstart'>
 
   <!-- 侧滑栏 -->
-  <view class="page_tab">
+  <view class="page_tab" >
     <view class="page_tab_content">
-       <view class="userinfo">
-          <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" style='left:-55px;top:20px'> 获取头像昵称 </button>
-          <block wx:else>
-            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-          </block>
-          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-        </view>
-        <view class='wc' style='margin-top:40px;' bindtap='GoHome'>
-          <image src='../../resourse/homepage_fill.png' class='pageimg'></image>
-          <text class='pagetxt'>首页</text>
-        </view>
-        <view class='wc' bindtap='GoAdd'>
-          <image src='../../resourse/addition_fill.png' class='pageimg'></image>
-          <text class='pagetxt'>添加</text>
-        </view>
-        <view class='wc' bindtap='GoContributor'>
-          <image src='../../resourse/businesscard_fill.png' class='pageimg'></image>
-          <text class='pagetxt'>关于</text>
-        </view>
-        <!--view class='wc'>
-          <image src='../../resourse/share_fill.png' class='pageimg'></image>
-          <text class='pagetxt'>分享</text>
-        </view-->
-        <button open-type='share' style="border:0; height:50px;width:300px;position:absolute;left:0;" plain='true'>
-          <view style='line-height:20px;display:flex;align-items:center'>
-            <image src='../../resourse/share_fill.png' style='height:30px;width:30px;margin-top:10px' class='pageimg'></image>
-            <text style='font-size:32rpx'>分享</text>
-          </view>
+      <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" style='left:-60px;top:40px'> 获取头像昵称 </button>
+        <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        </block>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
+      <view class='bgbody'>
+        <button class='btn' style='height:70px;width:280px;position:absolute;top:155px;background-color:#ffff;opacity:0.7;'bindtap='GoHome'>
+        <icon class='iconfont iconyingyong_zhengchang'> <text style='font-size:20px;padding-left:20px;'>主页</text></icon>
         </button>
+        <button class='btn' style='height:70px;width:280px;position:absolute;top:230px;background-color:#ffff;opacity:0.7;'bindtap='GoAdd'>
+        <icon class='iconfont iconxinzeng'> <text style='font-size:20px;padding-left:20px;'>添加</text></icon>
+        </button>
+        <button class='btn' style='height:70px;width:280px;position:absolute;top:305px;background-color:#ffff;opacity:0.7;'bindtap='GoContributor'>
+        <icon class='iconfont iconheadlines'> <text style='font-size:20px;padding-left:20px;'>关于</text></icon>
+        </button>
+        <button class='btn' style='height:70px;width:280px;position:absolute;top:380px;background-color:#ffff;opacity:0.6;'open-type='share'>
+        <icon class='iconfont iconfenxiang'> <text style='font-size:20px;padding-left:20px;'>分享</text></icon>
+        </button>
+      </view>
     </view>
   </view>
 
@@ -39,9 +31,11 @@
   <view class="bg" bindtap='hideview' style='display:{{display}}'></view>
 
   <!-- 主页 -->
-  <view class="home" style="{{translate}}">
+  <view class="home" style="{{translate}};background-color:{{bgColor}}">
+   <view style='height:22px;'></view>
     <view class='top'>
-      <image bindtouchend='showview' class='icon_user' src='../../resourse/1.png'></image>
+    <icon class='iconfont iconother' style='font-size:50px;postion:absolute;top:13px;left:2rpx;' bindtouchend='showview'></icon>
+ <!--image bindtouchend='showview' class='icon_user' src='../../resourse/other.png'></image-->
       <text class='txt'>纪念日</text>
     </view>
     
