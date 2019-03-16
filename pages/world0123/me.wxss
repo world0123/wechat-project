@@ -28,8 +28,8 @@
   left: 3px;
 }
 .top{
-  background-color: rgb(255,255,255);
-  height: 6%;
+  background-color: rgb(255, 255, 255);
+  height: 40px;
 }
 .txt{
   position: relative;
@@ -87,9 +87,12 @@
   border-radius: 50%;
   position: absolute;
   left: 20px;top: 40px;
+  overflow:hidden;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 .userinfo-nickname {
-  color: rgb(132, 132, 132);
+  color: rgb(247, 208, 34);
   position:absolute;
   left: 130px;top: 84px;
 }
@@ -157,6 +160,7 @@ color: transparent;
   position: absolute;
   left: 40px;
   top: 0px;
+  color: rgb(149, 226, 6);
 }
 
 @font-face {font-family: "iconfont";
@@ -207,6 +211,15 @@ color: transparent;
 .title{
   font-style:italic;
   font-size: 35rpx;
-   
 }
-
+.TXT{
+  color:rgb(250, 175, 37);
+  font-size:18px;
+  padding-left:20px;
+}
+.btn{
+  height:70px;
+  width:280px;
+  background-color:#ffff;
+  opacity:0.9;
+}
