@@ -1,29 +1,44 @@
 
 /* pages/detail.wxss */
+.top{
+  background-color: rgb(255,255,255);
+  height: 40.3px;
+  overflow:hidden;
+  border: 2px solid #fff;
+}
+.txt{
+  position: relative;
+  left: 160px;
+  top: 5px;  
+  color:rgb(20, 20, 20);
+}
+
 
 .body{ 
-  height:600px; 
-  /*background-size: 100% 100%;*/ 
-  /*background-image: url(http://img3.imgtn.bdimg.com/it/u=3934139407,2044539750&fm=26&gp=0.jpg);*/ 
+  height:670px; 
+  overflow: hidden;
+  background-size: 100% 100%;
+  background-image: url(http://img3.imgtn.bdimg.com/it/u=3934139407,2044539750&fm=26&gp=0.jpg);
+  opacity: 0.9;
 } 
 .title{ 
   height: 150px;
   line-height: 200px;
   font-size: 32px; 
   text-align: center;
-  color: rgb(255, 255, 255); 
+  color: rgb(255, 251, 251); 
 } 
 .resume{ 
   height: 100px;
   font-size: 32px; 
   text-align: center; 
-  color: rgb(255, 255, 255); 
+  color: rgb(253, 253, 253); 
 } 
 .date{ 
   height: 150px;
   padding:0%; 
   text-align: center; 
-  color: rgb(255, 255, 255); 
+  color: rgb(253, 252, 252); 
 }
 .tapbar{
   height: 40px;
@@ -32,6 +47,8 @@
   background-color:black;
   text-align: center;
   margin: center;
+  position: fixed;
+  bottom: 30px;
 }
 .main{
   height: 200px;

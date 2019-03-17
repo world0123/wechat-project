@@ -8,39 +8,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-    data:{},
-    Image:'',
-    index:null,
-    id:null,
-    list:[],
-    visible: false,
+    data:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (params) {
-    var that = this
-    console.log(params)
-    that.setData({
-      id:params.id,
-      index:params.index
-    })
+    var that=this
     db.collection('todos').doc(params.id).get({
       success(res) {
+        console.log(res.data)//下次删除
+        console.log(res.data)
         that.setData({
-          data: res.data,
-          Image:img+res.data.bgindex+'jpg'
+          data: res.data
         })
       }
     })
-    db.collection('todos').get({
-      success(res) {
-        that.setData({
-          list: res.data,
-        })
-      }
-    })
+  
   }, 
 
   /**
@@ -85,15 +70,6 @@ Page({
 
   },
 
-  ImageChange(){
-    var i = this.data.data.bgindex
-    console.log(i)
-    img = '../../image/img'+i+'.jpg'
-    this.setData({
-      Image:img
-    })
-  },
-
   GoHome:function(){
     wx.navigateTo({
       url: '../world0123/me',
@@ -105,33 +81,7 @@ Page({
   },
 
   Delete:function(){
-    var that=this
-    var list = app.data
-    var index = that.index
-    var id = that.id
-    this.data.opacity_value = 0
-    wx.showModal({
-      title: '提示',
-      content: '确定删除此卡片',
-      success: function (res) {
-        if (res.confirm) {
-          list.splice(index, 1)
-          //删除云端数据
-          db.collection('todos').doc(id).remove({
-            success(res) {
-              console.log("删除成功")
-            }
-          })
-          //更新本地列表
-          that.setData({
-            data: list
-          });
-          app.data=list
-          console.log(app.data)
-         
-        }
-      }
-    })
+   
   },
 
   // 展示/隐藏分享页面

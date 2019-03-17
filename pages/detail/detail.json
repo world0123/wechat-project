@@ -1,5 +1,5 @@
 {
-  "usingComponents": {
-    "canvas-share": "../../components/canvas-share/index"
-  }
+
+  "usingComponents": {},
+  "disableScroll": true
 }
