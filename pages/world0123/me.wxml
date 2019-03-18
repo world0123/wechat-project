@@ -3,16 +3,14 @@
   <view>
     <view class='navTitle' style='height: 44px;padding-top: {{statusBarHeight}}px'>
       <!-- <span class='back' bindtap="navBack"></span> -->
-      <span class="icon">
-        <icon class='iconfont iconother' style='color:rgb(83, 83, 83);font-size:50px;postion:absolute;top:13px;left:2rpx;' bindtouchend='showview'></icon>
-      </span>
+      <icon class='iconfont iconother' style='color:rgb(83, 83, 83);font-size:50px;postion:absolute;top:36rpx;left:2rpx;' bindtouchend='showview'></icon>
       纪念日
     </view>
-    <view class='occupy' style='height: 55px;'></view>
+    <view class='occupy' style='height: 80rpx;'></view>
   </view>
 
   <!-- 侧滑栏 -->
-  <view class="page_tab" >
+  <view class="page_tab" style='display:{{display}}'>
     <view class="page_tab_content">
       <view class="userinfo">
         <view class="userinfo-avatar">

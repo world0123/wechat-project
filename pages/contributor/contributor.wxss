@@ -333,7 +333,7 @@ swiper{
   color: #8bffff;
   background-color: #82acff;
   border-radius: 8rpx;
-  padding: 5rpx 12rpx 10rpx;
+  padding: 7rpx 12rpx 10rpx;
   font-size: 18px;
 }
 .detail_info{

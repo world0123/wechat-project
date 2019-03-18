@@ -13,6 +13,7 @@ Page({
     data: [],
     windowHeight: 0,
     bgColor:'',
+    display: 'none',
     statusBarHeight: wx.getSystemInfoSync().statusBarHeight
   },
   // 滑动开始

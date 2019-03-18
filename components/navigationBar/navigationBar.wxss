@@ -1,7 +1,7 @@
 /* components/navigationBar/navigationBar.wxss */
 .title{
   position: fixed;
-  background-color: #fdc57b;
+  background-color: #82acff;
   text-align: center;
   width: 100%;
   /* height: 200px; */
@@ -33,10 +33,9 @@
   width: 25rpx;
   height: 25rpx;
   position: absolute;
-  margin-top: 10rpx;
-  top: 50%;
+  bottom: 20rpx;
   left: 20rpx;
-  transform: rotate(45deg) translateY(-50%);
+  transform: rotate(45deg);
   border: 8rpx solid #007880;
   border-color: transparent transparent #007880 #007880;
 }

@@ -1,9 +1,21 @@
 /* pages/home/home.wxss */
-.page{  
+page{  
   height: 100%;
   width: 100%;
   background-color: #f8f8f9;
-}  
+}
+
+/* page::after{
+  content: '';
+  position:absolute;
+  top: 0px;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#62374e, #9e557c);
+  filter:blur(8rpx);
+  z-index:-1;
+} */
 
 .card_container{
   height: 93%;
@@ -18,7 +30,7 @@
   z-index: 1;  
   transition: All 0.4s ease;  
   -webkit-transition: All 0.4s ease;  
-  background-color: rgb(255,255,255);
+  /* background-color: rgb(255,255,255); */
 }  
 .icon_user{
   height: 50px;
@@ -80,6 +92,34 @@
   position: relative;
 }
 
+.userinfo::after{
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -180rpx;
+  bottom: 0;
+  border-width: 180rpx 580rpx;
+  border-color:transparent transparent #8f71ff transparent;
+  border-style: solid;
+  border-left: none;
+  z-index: -1;
+}
+
+.userinfo::before{
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0rpx;
+  bottom: -150rpx;
+  border-width: 230rpx 718rpx;
+  border-color: #82acff transparent transparent transparent;
+  border-style: solid;
+  border-left: none;
+  z-index: -1;
+}
+
 .userinfo-avatar {
   width: 140rpx;
   height: 140rpx;
@@ -92,7 +132,7 @@
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 .userinfo-nickname {
-  color: rgb(247, 208, 34);
+  color: #33313b;
   position:absolute;
   left: 130px;top: 84px;
 }
@@ -109,9 +149,15 @@
   position: fixed;
   bottom:30rpx;
   right: 30rpx;
-  box-shadow: 5px 5px 5px #8bffff;
+  box-shadow: 5px 5px 5px #befdfd;
 }
-
+.plus-button::after{
+  content: '';
+  width: 1rpx;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
 
 .order_item{
   border-radius:35rpx; 
@@ -239,7 +285,7 @@ color: transparent;
 /* navigationBar */
 .navTitle{
   position: fixed;
-  background-color: #fdc57b;
+  background-color: #82acff;
   text-align: center;
   width: 100%;
   /* height: 200px; */
@@ -249,7 +295,7 @@ color: transparent;
   content: '';
   width: 40rpx;
   height: 100%;
-  margin-top: 10rpx;
+  margin-top: 18rpx;
   display: inline-block;
   vertical-align: middle;
 }
