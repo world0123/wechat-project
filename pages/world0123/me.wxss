@@ -99,9 +99,17 @@
 .plus-button{
   width: 125rpx;
   height: 125rpx;
-  position: absolute;
-  bottom:10rpx;
-  right: 37.5rpx;
+  font-size: 100rpx;
+  font-weight: bold;
+  text-align: center;
+  line-height: 110rpx;
+  border-radius: 50%;
+  color: #8bffff;
+  background-color: #8f71ff;
+  position: fixed;
+  bottom:30rpx;
+  right: 30rpx;
+  box-shadow: 5px 5px 5px #8bffff;
 }
 
 
@@ -225,4 +233,26 @@ color: transparent;
   width:280px;
   background-color:#ffff;
   opacity:0.9;
+}
+
+
+/* navigationBar */
+.navTitle{
+  position: fixed;
+  background-color: #fdc57b;
+  text-align: center;
+  width: 100%;
+  /* height: 200px; */
+  z-index: 9999;
+}
+.navTitle::after{
+  content: '';
+  width: 40rpx;
+  height: 100%;
+  margin-top: 10rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.occupy{
+  width: 100%;
 }

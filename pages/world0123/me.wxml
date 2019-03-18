@@ -1,4 +1,15 @@
 <view class="page" bindtouchend='touchend' bindtouchstart='touchstart'>
+  <!-- navigationBar -->
+  <view>
+    <view class='navTitle' style='height: 44px;padding-top: {{statusBarHeight}}px'>
+      <!-- <span class='back' bindtap="navBack"></span> -->
+      <span class="icon">
+        <icon class='iconfont iconother' style='color:rgb(83, 83, 83);font-size:50px;postion:absolute;top:13px;left:2rpx;' bindtouchend='showview'></icon>
+      </span>
+      纪念日
+    </view>
+    <view class='occupy' style='height: 55px;'></view>
+  </view>
 
   <!-- 侧滑栏 -->
   <view class="page_tab" >
@@ -32,10 +43,10 @@
   <!-- 主页 -->
   <view class="home" style="{{translate}};background-color:{{bgColor}}">
    <view style='height:22px;'></view>
-    <view class='top'>
+    <!-- <view class='top'>
       <icon class='iconfont iconother' style='color:rgb(83, 83, 83);font-size:50px;postion:absolute;top:13px;left:2rpx;' bindtouchend='showview'></icon>
       <text class='txt'>纪念日</text>
-    </view>
+    </view> -->
     <scroll-view class='card_container' scroll-y='{{isScroll}}'>
         <navigator url='../detail/detail?id={{item._id}}' wx:key="items" wx:for="{{data}}">
           <view data-index='{{index}}' class="order_item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx;opacity:{{item.opacity_value}};" id="viewx" >
@@ -55,7 +66,7 @@
           </view>
         </navigator>
     </scroll-view>
-    <image class="plus-button" src="/image/plus1.png" bindtap="addpage"></image>
+    <view class="plus-button" bindtap="addpage">+</view>
   </view>
 
 </view>

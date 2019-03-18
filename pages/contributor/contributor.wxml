@@ -1,5 +1,6 @@
 <!--pages/contributor/contributor.wxml-->
 <view>
+  <my-navigationBar></my-navigationBar>
   <!-- 头部————展示小程序logo，名称 -->
   <view class='header' style='margin-top: 30rpx;'>
     <span>

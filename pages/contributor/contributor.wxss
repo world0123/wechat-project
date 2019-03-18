@@ -257,7 +257,7 @@ swiper{
   left: 90rpx;
   width: 0;
   height: 0;
-  border: 0 solid #ffa2ff;
+  border: 0 solid #82acff;
   border-right-width: 25rpx;
   border-top: 20rpx solid transparent;
   border-bottom: 20rpx solid transparent;
@@ -271,7 +271,7 @@ swiper{
   display: inline-block;
   width: 10rpx;
   height: 120rpx;
-  background-color: #dddee1;
+  background-color: #ff8cbada;
   opacity: 1;
 }
 .line_0{
@@ -330,7 +330,8 @@ swiper{
   display: inline-block;
   width: 400rpx;
   height: 90rpx;
-  background-color: #ffa2ff;
+  color: #8bffff;
+  background-color: #82acff;
   border-radius: 8rpx;
   padding: 5rpx 12rpx 10rpx;
   font-size: 18px;

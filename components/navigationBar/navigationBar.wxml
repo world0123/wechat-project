@@ -1,0 +1,11 @@
+<!--components/navigationBar/navigationBar.wxml-->
+<view>
+  <view class='title' style='height: 44px;padding-top: {{statusBarHeight}}px'>
+    <span class='back' bindtap="navBack" wx:if="{{type == 'back'}}"></span>
+    <span class="icon" wx:else>
+      <image src='../../image/metrolist.png' bindtap="{{showview}}" ></image>
+    </span>
+    <slot></slot>
+  </view>
+  <view class='occupy' style='height: 55px;'></view>
+</view>

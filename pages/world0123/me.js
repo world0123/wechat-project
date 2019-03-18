@@ -13,6 +13,7 @@ Page({
     data: [],
     windowHeight: 0,
     bgColor:'',
+    statusBarHeight: wx.getSystemInfoSync().statusBarHeight
   },
   // 滑动开始
   touchstart: function (e) {

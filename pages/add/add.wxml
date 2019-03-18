@@ -1,4 +1,5 @@
 <!--pages/add/add.wxml-->
+<my-navigationBar></my-navigationBar>
 <view class='container'>
   <form class='form_put' bindsubmit='subdata'>
     <view class='itemstyle'><!--表单的具体内容-->
