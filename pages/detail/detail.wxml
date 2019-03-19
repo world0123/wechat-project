@@ -1,8 +1,9 @@
 <!--pages/detail.wxml-->
-<view style='height:22px;'></view>
+<!-- <view style='height:22px;'></view>
 <view class='top'>
   <text class='txt'>纪念日</text>
-</view>
+</view> -->
+<my-navigationBar></my-navigationBar>
 <view class='body'> 
   <view class='title'> 
     <text>距离{{data.title}}还有{{data.day}}天</text> 

@@ -34,7 +34,7 @@
   height: 25rpx;
   position: absolute;
   bottom: 20rpx;
-  left: 20rpx;
+  left: 35rpx;
   transform: rotate(45deg);
   border: 8rpx solid #007880;
   border-color: transparent transparent #007880 #007880;
