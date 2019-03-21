@@ -11,7 +11,8 @@ Page({
     date:'',
     shorttext:'',
     day:'0',
-    bgindex:'1'
+    bgindex:'1',
+    picture:[1,2,3,4,5,6]
   },
   //响应选择日期
   bindDateChange: function (e) {
@@ -23,7 +24,12 @@ Page({
       day:day
     })
   },
-
+  cardSwiper(e) {
+    console.log(e)
+    this.setData({
+      bgindex:e.detail.current+1
+    })
+  },
   subdata:function(e)
   {//获取选择的图片
     var cargo = wx.getStorageSync("cargo")
@@ -162,11 +168,4 @@ Page({
     
     return day;
   },
-  picture:function()
-  {
-    wx.navigateTo({
-      url: '../picture/picture',
-    })
-  },
-
 })

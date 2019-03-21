@@ -13,16 +13,15 @@ page{
 }
 .itemstyle{
   display: flex;
-  padding: 30rpx 40rpx ;
+  padding: 30rpx 30rpx ;
   vertical-align: center;
-  border-bottom: 2rpx solid #aaa;
   font-size: 32rpx;
+  border-bottom: 5rpx solid #f8f8f8;
 }
 .textarea_warp{
-  padding: 30rpx 40rpx ;
+  padding: 30rpx 30rpx ;
   font-size: 32rpx;
-  background-color: #fff;
-  border: 2rpx solid #aaa
+  background-color: #f8f8f8;
 }
 .form_put view input{
   text-align: right;

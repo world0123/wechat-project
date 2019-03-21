@@ -22,8 +22,12 @@
     </view>
     <view class='itemstyle'>
       <icon class='iconfont icon-icon_photo'> 修改封面：</icon>  
-      <view class='pickers'><icon class='iconfont icon-icon_next_arrow' bindtap='picture'>点击修改</icon></view>
     </view>
+    <swiper class='itemstyle' style='height:420rpx;background-color:#F8F8F8;' indicator-dots="ture" circular="ture" indicator-color="#8799a3" indicator-active-color="#0081ff" bindchange="cardSwiper">
+      <swiper-item wx:for="{{picture}}">
+        <image src='/image/img{{item}}.jpg' style='height:80%;width:100%;border-radius:20rpx;box-shadow: -5rpx 5rpx 10rpx #d6d6d6'></image>
+      </swiper-item>
+    </swiper>
     <view class='itemstyle' style='border-bottom:0rpx;'>
       <icon class='iconfont icon-icon_compile'> 输入简介：</icon>  
     </view>

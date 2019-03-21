@@ -1,3 +1,0 @@
-<!--pages/picture/picture.wxml-->
-<image wx:for="{{data}}" wx:key="items" src='/image/img{{item}}.jpg' class='imagestyle' data-index="{{index}}"             bindtap='chosepicture'>
-</image>
