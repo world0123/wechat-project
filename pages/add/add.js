@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    cardCur: 0,
     text_name:'',
     upmost:false,
     date:'',
@@ -25,9 +26,10 @@ Page({
     })
   },
   cardSwiper(e) {
-    console.log(e)
+    var index = e.detail.current
     this.setData({
-      bgindex:e.detail.current+1
+      cardCur:index,
+      bgindex:index+1
     })
   },
   subdata:function(e)

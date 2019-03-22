@@ -1,0 +1,18 @@
+<!--pages/test/test.wxml-->
+<text>pages/test/test.wxml</text>
+<view class='card'>
+  <view class='img' style='background-image:url("/image/img1.jpg");background-size:cover;'>
+    <view class='content_title'>
+      <icon class='iconfont icon-icon_ding'></icon>
+      <text> 事件名称</text>
+    </view>
+    <view class='content_date'>
+      <icon class='iconfont icon-icon_calendar'></icon>
+      <text> 还剩</text>
+      <text>19</text>
+    </view>  
+  </view>
+  <view>
+
+  </view>
+</view>

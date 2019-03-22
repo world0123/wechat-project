@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/world0123/me",
     "pages/add/add",
+    "pages/world0123/me",
     "pages/contributor/contributor",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/test/test"
   ],
   "window": {
     "backgroundTextStyle": "light",
