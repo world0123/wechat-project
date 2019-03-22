@@ -160,8 +160,8 @@ page{
 }
 
 .order_item{
-  border-radius:35rpx; 
-  height: 300rpx;
+  border-radius:10rpx; 
+  height: 315rpx;
   position: relative;
   margin: 24rpx 37.5rpx;
   box-shadow: -5rpx 5rpx 10rpx #d6d6d6;

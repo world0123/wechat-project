@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/add/add",
     "pages/world0123/me",
     "pages/contributor/contributor",
+    "pages/add/add",
     "pages/detail/detail",
     "pages/test/test"
   ],
